@@ -1,4 +1,4 @@
-# Flashing Heart
+# Flashing Heart Corazón parpadeante
 
 ## Code a Flashing Heart @unplugged
 
