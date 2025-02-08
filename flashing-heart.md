@@ -2,7 +2,7 @@
 
 ## Code a Flashing Heart @unplugged
 
-Code the lights on the micro:bit into a flashing heart animation! 💖
+Programa las luces del micro:bit the lights on the micro:bit into a flashing heart animation! 💖
 
 ![Heart shape in the LEDs](/static/mb/projects/flashing-heart/sim.gif)
 
