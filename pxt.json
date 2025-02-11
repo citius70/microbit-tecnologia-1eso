@@ -13,7 +13,8 @@
         "main.ts",
         "01_corazon_palpitante.md",
         "01_led_palpitante.md",
-        "01_ejemplo.md"
+        "01_ejemplo.md",
+        "01_ejemplo1.md"
     ],
     "testFiles": [
         "test.ts"
