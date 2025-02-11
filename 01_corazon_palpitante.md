@@ -1,4 +1,4 @@
-# blink blocks activity
+# Encendido de leds
 
 Turn an LED on and off with forever 
 
