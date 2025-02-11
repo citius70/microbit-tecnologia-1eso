@@ -11,7 +11,8 @@
         "README.md",
         "main.blocks",
         "main.ts",
-        "flashing-lights.md"
+        "flashing-lights.md",
+        "02_tutorial.md"
     ],
     "testFiles": [
         "test.ts"
