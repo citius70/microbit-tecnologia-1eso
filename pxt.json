@@ -1,5 +1,5 @@
 {
-    "name": "letram",
+    "name": "letramm",
     "version": "0.0.0",
     "description": "",
     "dependencies": {
@@ -25,5 +25,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
