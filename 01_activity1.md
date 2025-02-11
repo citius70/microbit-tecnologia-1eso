@@ -1,11 +1,15 @@
-### @activities true
+## Activity 1
 
-## Introduction
+### Step 1
 
-### Introduction step @showdialog
+Instructions for step 1 of activity 1 here...
 
-![Lights flashing](/static/tutorials/light-blaster/flashing-lights.gif)
+### Step 2
 
-# Light blaster
+Instructions for step 2 of activity 1 here...
 
-The amazing blast of bright light! Make a program to flash the LEDs.
+## Activity 2
+
+### Step 1
+
+Instructions for step 1 of activity 2 here...
