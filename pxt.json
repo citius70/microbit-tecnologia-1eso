@@ -11,7 +11,8 @@
         "README.md",
         "main.blocks",
         "main.ts",
-        "01_corazon_palpitante.md"
+        "01_corazon_palpitante.md",
+        "01_led_palpitante.md"
     ],
     "testFiles": [
         "test.ts"
