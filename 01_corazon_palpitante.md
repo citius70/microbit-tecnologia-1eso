@@ -1,10 +1,8 @@
-# Encendido de leds
+# Parpadeo de LEDs
 
-Turn an LED on and off with forever 
+En esta actividad encenderás y apagarás un LED de forma continua.
 
-## Paso 1
-
-dgsd
+## fsfsdfs
 
 ```sim
 basic.forever(() => {
@@ -14,5 +12,6 @@ basic.forever(() => {
     basic.pause(500)
 })
 ```
+Let's build a blinking light!
 
-# Psso 2
+# Paso 2
