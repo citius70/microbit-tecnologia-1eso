@@ -1,5 +1,5 @@
 {
-    "name": "Tutoriales_Microbit",
+    "name": "Tutoriales_Microbit ",
     "version": "0.0.0",
     "description": "",
     "dependencies": {
@@ -12,7 +12,8 @@
         "main.blocks",
         "main.ts",
         "01_corazon_palpitante.md",
-        "01_led_palpitante.md"
+        "01_led_palpitante.md",
+        "01_ejemplo.md"
     ],
     "testFiles": [
         "test.ts"
