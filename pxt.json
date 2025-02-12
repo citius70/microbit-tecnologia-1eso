@@ -12,11 +12,11 @@
         "main.blocks",
         "main.ts",
         "01_corazon_palpitante.md",
-        "01_led_palpitante.md",
         "01_ejemplo.md",
         "01_ejemplo1.md",
         "01_activity1.md",
-        "01_primeros_pasos.md"
+        "01_primeros_pasos.md",
+        "02_leds_parpadeantes.md"
     ],
     "testFiles": [
         "test.ts"
