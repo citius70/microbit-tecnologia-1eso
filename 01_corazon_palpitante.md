@@ -14,6 +14,7 @@ basic.forever(() => {
 ```
 Let's build a blinking light!
 
-## Paso 2
 
-zczczcz
+aaaa
+
+## Paso 2
