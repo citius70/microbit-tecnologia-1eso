@@ -1,34 +1,34 @@
-# Getting Started
+# Primeros pasos con @boardname@
 
 ## Paso 1
 
-Bienvenid@s! Sitúa el bloque ``||basic:mostar texto||`` en el espacio ``||basic:al comienzo||``. Reemplaza el texto ``"Hola"`` con tu nombre. Viste cómo se desplaza el texto?
+Bienvenid@s! Sitúa el bloque ``||basic:mostar cadena||`` en el espacio ``||basic:al iniciar||``. Reemplaza el texto ``"Hola"`` con tu nombre. Viste cómo se desplaza el texto?
 
 ```blocks
-basic.showString("Micro!")
+basic.showString("Alberto")
 ```
 
-## Step 2
+## Paso 2
 
-Well, the text stopped scrolling. Place the ``||basic:show string||`` block in the ``||input:on button pressed||`` slot to scroll your name when button **A** is pressed.
+El texto dejó de desplazarse. Coloca el bloque ``||basic:mostrar cadena||`` en la ranura ``||input:al presionar el botón||`` para desplazar su nombre cuando se pulse el botón **A**.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
-    basic.showString("Micro!")
+    basic.showString(«¡Alberto»)
 });
 ```
 
-## Step 3
+## Paso 3
 
-Place some blocks to display a smiley when button **B** is pressed.
+Coloca algunos bloques para mostrar un ``smiley`` cuando se pulse el botón **B**.
 
-Use the dropdown to find ``B``!
+Usa el desplegable para encontrar ``B``.
 
 ```blocks
 input.onButtonPressed(Button.B, () => {
     basic.showLeds(`
-    # # . # #
-    # # . # #
+    . . . . .
+    . # . # .
     . . . . .
     # . . . #
     . # # # .
@@ -36,9 +36,9 @@ input.onButtonPressed(Button.B, () => {
 })
 ```
 
-## Step 4
+## Paso 4
 
-Place the ``||basic:show number||`` and ``||Math:pick random||`` blocks in an ``||input:on shake||`` block to build a dice.
+Coloca los bloques ``||basic:mostrar número|||`` y ``|Math:escoger al azar||`` en un bloque ``||input:si agitado||`` para construir un dado.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -46,9 +46,9 @@ input.onGesture(Gesture.Shake, () => {
 })
 ```
 
-## Step 5
+## Paso 5
 
-A typical dice shows values from `1` to `6`. So, in ``||Math:pick random||``, don't forget to choose the right minimum and maximum values!
+Un dado típico muestra valores de `1` a `6`. Así que, en ``||Math:escoger al azar||``, ¡no olvides elegir bien los valores mínimo y máximo!
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -56,14 +56,13 @@ input.onGesture(Gesture.Shake, () => {
 })
 ```
 
-## Step 6
+## Paso 6
+Si tienes un @boardname@, conéctale un cable USB y haz clic en ``|Descargar|``. Guarda el programa en la unidad **@drivename@**. Esto transfiere tu código al @boardname@.
 
-If you have a @boardname@, connect a USB cable to it and click ``|Download|``. Save the program to the **@drivename@** drive. This transfers your code to the @boardname@!
+## Paso 7
 
-## Step 7
+En el @boardname@, pulse el botón **A** para desplazar el texto. Pulse el botón **B** para mostrar un smiley. Agite el @boardname@ y vea qué número ha elegido.
 
-On the @boardname@, press button **A** to scroll your text. Press button **B** to show a smiley. Shake the @boardname@ and see which number is chosen.
+## Paso 8
 
-## Step 8
-
-Well done! You've completed your first Microsoft MakeCode activity.
+¡Bien hecho! Ha completado su primera actividad Microsoft MakeCode.😛
