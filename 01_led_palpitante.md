@@ -1,8 +1,8 @@
 # Getting Started
 
-## Step 1
+## Paso 1
 
-Welcome! Place the ``||basic:show string||`` block in the ``||basic:on start||`` slot. Replace the ``"Hello"`` text with your name. Did you see it scroll in the simulator?
+Bienvenid@s! Sitúa el bloque ``||basic:mostar texto||`` en el espacio ``||basic:al comienzo||``. Reemplaza el texto ``"Hola"`` con tu nombre. Viste cómo se desplaza el texto?
 
 ```blocks
 basic.showString("Micro!")
