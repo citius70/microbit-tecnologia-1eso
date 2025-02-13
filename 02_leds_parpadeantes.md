@@ -44,9 +44,9 @@ basic.pause(500)
 led.plot(0, 0)
 ```
 
-¡Atención!. El actual cófigo funciona, pero hace que el LED parpadea una sola vez.
+¡Atención!. El actual código funciona, pero hace que el LED parpadea una sola vez.
 
-Para solucionarlo, vamos a utilizar el bucle `por siempre` y mover el código dentro de él para que se repita una y otra vez. Puedes eliminar el bloque -------  ya que no es necesario ahora.
+Para solucionarlo, vamos a utilizar el bucle `por siempre` y mover el código dentro de él para que se repita una y otra vez. Puedes eliminar el bloque `plot` ya que no es necesario ahora.
 
 ```blocks
 basic.forever(() => {
@@ -59,6 +59,56 @@ basic.forever(() => {
 
 ## ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/lessons/blink/challenges)!
+Muy bien, estás preparado para continuar con algún desafío.ns/blink/challenges)!
 
 ## ~
+
+## Desafío 1
+
+Mostremos una "cara sonriente". Comenzaremos con los ojos en este desafío y lo completaremos en el Desafío 2.
+
+Añade `graficar(1,1)` y `graficar(3,1)` y debajo `graficar(2,2)` ; después añade `ocultar(1,1)`, `ocultar(3,1)` y `ocultar(2,2)` después `pausa`.
+
+Cuando esté preparado, no olvides probar el código.
+
+```blocks
+basic.forever(() => {
+    led.plot(2, 2)
+    led.plot(1, 1)
+    led.plot(3, 1)
+    basic.pause(500)
+    led.unplot(2, 2)
+    led.unplot(1, 1)
+    led.unplot(3, 1)
+    basic.pause(500)
+})
+```
+
+## Desafío 2
+
+Completa el código para conseguir una "cara sonriente".
+
+```sim
+basic.forever(() => {
+    led.plot(1, 1)
+    led.plot(3, 1)
+    led.plot(2, 2)
+    led.plot(0, 3)
+    led.plot(4, 3)
+    led.plot(1, 4)
+    led.plot(2, 4)
+    led.plot(3, 4)
+    basic.pause(500)
+    led.unplot(1, 1)
+    led.unplot(3, 1)
+    led.unplot(2, 2)
+    led.unplot(0, 3)
+    led.unplot(4, 3)
+    led.unplot(1, 4)
+    led.unplot(2, 4)
+    led.unplot(3, 4)
+    basic.pause(500)
+})
+```
+
+
