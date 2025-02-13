@@ -18,7 +18,7 @@ Constuyamos un LED parpadeante!
 
 El concepto es muy simple: enciende el LED, espera un rato, apaga el LED, espera de nuevo y se repite de nuevo.
 
-Comencemos añadiendo una línea de cófigo que enciende el LED en la posición (0, 0).
+Comencemos añadiendo una línea de cófigo que enciende el LED en la posición (0, 0) ``||led.plot(0,0)||``.
 
 ```blocks
 led.plot(0, 0)

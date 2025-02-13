@@ -4,7 +4,7 @@
 
 Bienvenid@s!
 
-Sitúa el bloque ``||basic:mostar cadena||`` en el espacio ``||basic:al iniciar||``. Reemplaza el texto ``"Hola"`` con tu nombre. Viste cómo se desplaza el texto?
+Sitúa el bloque ``||basic:mostar cadena||`` en el espacio ``||basic:al iniciar||``. Reemplaza el texto ``"Hola"`` con tu nombre. ¿Viste cómo se desplaza el texto?
 
 ```blocks
 basic.showString("Alberto")
