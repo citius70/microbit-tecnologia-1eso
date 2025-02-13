@@ -7,9 +7,9 @@ Enciende y apaga un LED constantemente
 ```sim
 basic.forever(() => {
     led.plot(0, 0)
-    basic.pause(500)
+    basic.pause(1000)
     led.unplot(0, 0)
-    basic.pause(500)
+    basic.pause(1000)
 })
 ```
 Constuyamos un LED parpadeante!
@@ -26,11 +26,11 @@ led.plot(0, 0)
 
 Prueba el programa en el simulador para asegurarte de su funcionamiento.
 
-Ahora, añadamos código para `pausar` 0.5 segundos (500 milisegundos) y apagar el LED.
+Ahora, añadamos código para `pausar` 1 segundos (1000 milisegundos) y apagar el LED.
 
 ```blocks
 led.plot(0, 0)
-basic.pause(500)
+basic.pause(1000)
 led.unplot(0,0)
 ```
 
@@ -38,9 +38,9 @@ Hemos encendido y apagado el LED una sola vez. Añadamos otra pausa y encendamos
 
 ```blocks
 led.plot(0, 0)
-basic.pause(500)
+basic.pause(1000)
 led.unplot(0, 0)
-basic.pause(500)
+basic.pause(1000)
 led.plot(0, 0)
 ```
 
@@ -51,9 +51,9 @@ Para solucionarlo, vamos a utilizar el bucle `por siempre` y mover el código de
 ```blocks
 basic.forever(() => {
     led.plot(0, 0)
-    basic.pause(500)
+    basic.pause(1000)
     led.unplot(0, 0)
-    basic.pause(500)
+    basic.pause(1000)
 })
 ```
 
@@ -76,11 +76,11 @@ basic.forever(() => {
     led.plot(2, 2)
     led.plot(1, 1)
     led.plot(3, 1)
-    basic.pause(500)
+    basic.pause(1000)
     led.unplot(2, 2)
     led.unplot(1, 1)
     led.unplot(3, 1)
-    basic.pause(500)
+    basic.pause(1000)
 })
 ```
 
@@ -98,7 +98,7 @@ basic.forever(() => {
     led.plot(1, 4)
     led.plot(2, 4)
     led.plot(3, 4)
-    basic.pause(500)
+    basic.pause(1000)
     led.unplot(1, 1)
     led.unplot(3, 1)
     led.unplot(2, 2)
@@ -107,7 +107,7 @@ basic.forever(() => {
     led.unplot(1, 4)
     led.unplot(2, 4)
     led.unplot(3, 4)
-    basic.pause(500)
+    basic.pause(1000)
 })
 ```
 
