@@ -3,7 +3,7 @@
 
 Tutoriales:
 * Tutorial 01
-* [Tutorial 02] (https://makecode.microbit.org/#tutorial:github:citius70/microbit-tecnologia-1eso/02_leds_parpadeantes)
+* [Tutorial 02](https://makecode.microbit.org/#tutorial:github:citius70/microbit-tecnologia-1eso/02_leds_parpadeantes)
 
 ## Use as Extension
 
