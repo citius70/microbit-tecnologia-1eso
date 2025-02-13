@@ -4,6 +4,13 @@
 Tutoriales:
 * Tutorial 01
 
+[{
+  "name": "First Lessons",
+  "description": "A sequence of lessons from the Micro:bit Educational Foundation that provide a pathway through six projects, ideal for getting started with the micro:bit",
+  "url":"https://microbit.org/teach/lessons/first-lessons-with-makecode-and-the-microbit",
+  "imageUrl": "/static/courses/first-lessons.png"
+}]
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
