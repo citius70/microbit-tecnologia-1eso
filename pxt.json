@@ -16,7 +16,8 @@
         "01_ejemplo1.md",
         "01_activity1.md",
         "01_primeros_pasos.md",
-        "02_leds_parpadeantes.md"
+        "02_leds_parpadeantes.md",
+        "03_brujula.md"
     ],
     "testFiles": [
         "test.ts"
