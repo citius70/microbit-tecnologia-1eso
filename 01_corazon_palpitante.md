@@ -8,15 +8,15 @@ Codifica los LEDs en el @boardname@ para conseguir esta animación 💖
 
 ## {Paso 1 @fullscreen}
 
-Click on the ``||basic:Basic||`` category in the Toolbox. 
-Drag the ``||basic:show leds||`` block into the ``||basic:forever||`` block. 
-Then in the ``||basic:show leds||`` block, click on the squares to draw a heart design.
+Haz clic en la categoría ``||basic:Básico||`` en la Caja de Herramientas. 
+Arrastra el bloque ``||basic:show leds||`` dentro del bloque ``||basic:forever||``. 
+Después en el bloque ``||basic:show leds||``, haz clic en los cuadrados para dibujar un corazón.
 
 ![An animation that shows how to drag a block and paint a heart](/static/mb/projects/flashing-heart/showleds.gif)
 
-## {Step 2}
+## {Paso 2}
 
-Drag another ``||basic:show leds||`` block underneath the first.
+Arrastra otro bloque ``||basic:show leds||``  debajo del primero.
 
 ```blocks
 basic.forever(function() {
@@ -35,17 +35,17 @@ basic.forever(function() {
 })
 ```
 
-## {Step 3}
+## {Paso 3}
 
-Look at the @boardname@ on the screen. Do you see a flashing heart animation? ⭐ Great job! ⭐ 
+Mira el @boardname@ en la pantalla. ¿Ves la animación del corazón? ⭐ ¡Buen trabajo! ⭐ 
 
-## {Step 4}
+## {Paso 4}
 
-If you have a @boardname@ device, connect it to your computer and click the ``|Download|`` button. Follow the instructions to transfer your code onto the @boardname@ and watch the hearts flash! 
+Ahora conecta tu dispositivo @boardname@ al ordenador y haz clic en el botón ``|Descargar|``. Sigue las instrucciones para transferir el código al @boardname@ y mira el corazón palpitar. 
 
-## {Step 5}
+## {Paso 5}
 
-Go further - try adding more ``||basic:show leds||`` blocks to create a longer animation! Learn more about how the @boardname@ lights work by watching [this video](https://youtu.be/qqBmvHD5bCw).
+Vamos más allá. Intenta añadir más bloques ``||basic:show leds||`` para crear a animación más completa. Aprende más cómo funcionan los LEDs del @boardname@ viendo [this video](https://youtu.be/qqBmvHD5bCw).
 
 ```template
 basic.forever(function() {})
