@@ -9,6 +9,8 @@ Mostrar la **letra N** cuando la brújula del @boardname@ apunte hacia el **Nort
 ## Paso 1
 
 Crea un bucle que actualice constantemente la lectura de la brújula.
+ 1. Crea una variable llamada `grados`.
+ 2. 
 
 ```blocks
 basic.forever(() => {
