@@ -2,8 +2,8 @@
 > Open this page at [https://citius70.github.io/microbit-tecnologia-1eso/](https://citius70.github.io/microbit-tecnologia-1eso/)
 
 Tutoriales:
-* Tutorial 01
-* [Tutorial 02](https://makecode.microbit.org/#tutorial:github:citius70/microbit-tecnologia-1eso/02_leds_parpadeantes)
+* Tutorial 01: Primeros pasos](https://makecode.microbit.org/#tutorial:github:citius70/microbit-tecnologia-1eso/01_primeros_pasos)
+* [Tutorial 02]
 
 ## Use as Extension
 
