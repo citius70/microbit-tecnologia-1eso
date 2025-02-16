@@ -1,5 +1,7 @@
 # Primeros pasos con @boardname@
 
+
+
 ## Paso 1
 
 Bienvenid@s!
@@ -12,7 +14,7 @@ basic.showString("Alberto")
 
 ## Paso 2
 
-El texto dejó de desplazarse. Arrastra el bloque ``||input:al presionar el botón: A||`` y coloca ``||basic:mostrar cadena||`` en su ranura. Ahora pulsa el botón **`A`** y mira como se desplaza el texto.
+El texto dejó de desplazarse. Arrastra el bloque ``||input:al presionar el botón: A||`` y coloca ``||basic:mostrar cadena:(TU_NOMBRE)||`` en su ranura. Ahora pulsa el botón **`A`** y mira como se desplaza el texto.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
@@ -24,7 +26,7 @@ input.onButtonPressed(Button.A, () => {
 
 Coloca algunos bloques para mostrar un **``smiley``** cuando se pulse el botón **`B`**. 
 
-Para ello, arrastra el bloque ``||basic:mostrar LEDs||``. Usa el desplegable para encontrar **`B`**.
+Para ello, arrastra el bloque ``||basic:mostrar LEDs||`` dentro de otro bloque ``||input:al presionar el botón: B||`` (Usa el desplegable para encontrar **`B`**).
 
 ```blocks
 input.onButtonPressed(Button.B, () => {
@@ -40,7 +42,7 @@ input.onButtonPressed(Button.B, () => {
 
 ## Paso 4
 
-Ahora, haz que se muestre un número al azar al agitar el @boardname@.
+Ahora, haz que se muestre un **número al azar** al *agitar** el @boardname@.
 
 Coloca los bloques ``||basic:mostrar número|||`` y ``||math:escoger al azar||`` en un bloque ``||input:si agitado||`` para construir un dado.
 
@@ -62,7 +64,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Paso 6
 
-Ahora vamos a transferir el programa a la tarjeta controladora @boardname@.
+Ahora vamos a +transferir el programa** a la tarjeta controladora @boardname@.
 
 Conecta la tarjeta al ordenador con un cable USB y haz clic en ``|Descargar|``. Guarda el programa en la unidad **@drivename@**. Esto transfiere tu código al @boardname@.
 
