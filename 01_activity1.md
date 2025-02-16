@@ -9,7 +9,7 @@ install on a micro:bit.
 ## Figure 1.11
 LED Screen with code:
 
-```sim
+```blocks
 basic.showIcon(IconNames.Square)
 led.plot(2, 2)
 ```
@@ -17,7 +17,7 @@ led.plot(2, 2)
 ## Figure 1.12
 
 Take action on button A/B pressed.
-```sim
+```blocks
 input.onButtonPressed(Button.A, () => {
     basic.showIcon(IconNames.Square)
 })
