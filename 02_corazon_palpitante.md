@@ -9,14 +9,14 @@ Codifica los LEDs en el @boardname@ para conseguir esta animación 💖
 ## {Paso 1 @fullscreen}
 
 Haz clic en la categoría ``||basic:Básico||`` en la Caja de Herramientas. 
-Arrastra el bloque ``||basic:show leds||`` dentro del bloque ``||basic:forever||``. 
-Después en el bloque ``||basic:show leds||``, haz clic en los cuadrados para dibujar un corazón.
+Arrastra el bloque ``||basic:mostrar leds||`` dentro del bloque ``||basic:para siempre||``. 
+Después en el bloque ``||basic:mostrar leds||``, haz clic en los cuadrados para dibujar un corazón.
 
 ![An animation that shows how to drag a block and paint a heart](/static/mb/projects/flashing-heart/showleds.gif)
 
 ## {Paso 2}
 
-Arrastra otro bloque ``||basic:show leds||``  debajo del primero.
+Arrastra otro bloque ``||basic: mostrar leds||``  debajo del primero.
 
 ```blocks
 basic.forever(function() {
@@ -45,8 +45,7 @@ Ahora conecta tu dispositivo @boardname@ al ordenador y haz clic en el botón ``
 
 ## {Paso 5}
 
-Vamos más allá. Intenta añadir más bloques ``||basic:show leds||`` para crear a animación más completa. Aprende más cómo funcionan los LEDs del @boardname@ viendo [this video](https://youtu.be/qqBmvHD5bCw).
-
+Vamos más allá. Intenta añadir más bloques ``||basic:mostrar leds||`` para crear a animación más completa.
 ```template
 basic.forever(function() {})
 ```
