@@ -64,7 +64,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Paso 6
 
-Ahora vamos a +transferir el programa** a la tarjeta controladora @boardname@.
+Ahora vamos a **transferir el programa** a la tarjeta controladora @boardname@.
 
 Conecta la tarjeta al ordenador con un cable USB y haz clic en ``|Descargar|``. Guarda el programa en la unidad **@drivename@**. Esto transfiere tu código al @boardname@.
 
