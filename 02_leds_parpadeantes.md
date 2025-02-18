@@ -2,9 +2,7 @@
 
 Enciende y apaga un LED constantemente
 
-## Paso 1
-
-```sims
+```sim
 basic.forever(() => {
     led.plot(0, 0)
     basic.pause(1000)
@@ -14,11 +12,11 @@ basic.forever(() => {
 ```
 Constuyamos un LED parpadeante!
 
-## ~
+## Paso 1
 
 El concepto es muy simple: enciende el LED, espera un rato, apaga el LED, espera de nuevo y se repite de nuevo.
 
-Comencemos añadiendo una línea de cófigo que enciende el LED en la posición (0, 0) ``||led.plot(0,0)||``.
+Comencemos añadiendo una línea de código que enciende el LED en la posición (0, 0) ``||led.graficar x=0, y=0||``.
 
 ```blocks
 led.plot(0, 0)
@@ -26,14 +24,15 @@ led.plot(0, 0)
 
 Prueba el programa en el simulador para asegurarte de su funcionamiento.
 
-Ahora, añadamos código para `pausar` 1 segundos (1000 milisegundos) y apagar el LED.
+## Paso 2
+Ahora, añadamos código para `pausar` 1 segundo (1000 milisegundos) y apagar el LED. ``||basic.pausa ms(1000)||``.
 
 ```blocks
 led.plot(0, 0)
 basic.pause(1000)
 led.unplot(0,0)
 ```
-
+## Paso 3
 Hemos encendido y apagado el LED una sola vez. Añadamos otra pausa y encendamos el LED otra vez.
 
 ```blocks
@@ -45,6 +44,8 @@ led.plot(0, 0)
 ```
 
 ¡Atención!. El actual código funciona, pero hace que el LED parpadea una sola vez.
+
+## Paso 4
 
 Para solucionarlo, vamos a utilizar el bucle `por siempre` y mover el código dentro de él para que se repita una y otra vez. Puedes eliminar el bloque `plot` ya que no es necesario ahora.
 
@@ -59,7 +60,7 @@ basic.forever(() => {
 
 ## ~avatar boothing
 
-Muy bien, estás preparado para continuar con algún desafío.ns/blink/challenges)!
+Muy bien, estás preparado para continuar con algún desafío.
 
 ## ~
 
@@ -67,7 +68,7 @@ Muy bien, estás preparado para continuar con algún desafío.ns/blink/challenge
 
 Mostremos una "cara sonriente". Comenzaremos con los ojos en este desafío y lo completaremos en el Desafío 2.
 
-Añade `graficar(1,1)` y `graficar(3,1)` y debajo `graficar(2,2)` ; después añade `ocultar(1,1)`, `ocultar(3,1)` y `ocultar(2,2)` después `pausa`.
+Añade ``||led.graficar(1,1)||`` y ``||led.graficar(3,1)||`` y debajo ``||led.graficar(2,2)||``. después añade ``||led.ocultar(1,1)||``, ``||led.ocultar(3,1)||`` y ``||plot.ocultar(2,2)||`` después ``||led.pausa ms (1000)||``.
 
 Cuando esté preparado, no olvides probar el código.
 
@@ -110,5 +111,3 @@ basic.forever(() => {
     basic.pause(1000)
 })
 ```
-
-
