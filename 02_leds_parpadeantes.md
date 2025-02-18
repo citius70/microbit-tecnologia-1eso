@@ -2,9 +2,9 @@
 
 Enciende y apaga un LED constantemente
 
-## ~avatar avatar
+## Paso 1
 
-```sim
+```sims
 basic.forever(() => {
     led.plot(0, 0)
     basic.pause(1000)
