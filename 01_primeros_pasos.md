@@ -70,7 +70,7 @@ Conecta la tarjeta al ordenador con un cable USB y haz clic en ``|Descargar|``. 
 
 ## Paso 7
 
-En el @boardname@, pulse el botón `**A**` para desplazar el texto. Pulse el botón `**B**` para mostrar un `smile`. Agite el @boardname@ y mira qué número ha elegido.
+En el @boardname@, pulse el botón **`A`** para desplazar el texto. Pulse el botón **`B`** para mostrar un `smile`. Agite el @boardname@ y mira qué número ha elegido.
 
 ## Paso 8
 
