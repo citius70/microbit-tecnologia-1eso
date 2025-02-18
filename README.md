@@ -3,7 +3,7 @@
 
 Tutoriales:
 * [Tutorial 01: Primeros pasos](https://makecode.microbit.org/#tutorial:github:citius70/microbit-tecnologia-1eso/01_primeros_pasos)
-* [Tutorial 02: Corazón palpitante](https://makecode.microbit.org/#tutorial:github:citius70/microbit-tecnologia-1eso/01_corazon_palpitante)
+* [Tutorial 02: Corazón palpitante](https://makecode.microbit.org/#tutorial:github:citius70/microbit-tecnologia-1eso/02_corazon_palpitante)
 * [Tutorial 03: LEDs parpadeantes](https://makecode.microbit.org/#tutorial:github:citius70/microbit-tecnologia-1eso/02_leds_parpadeantes)
 * [Tutorial 04: Activity 1](https://makecode.microbit.org/#tutorial:github:citius70/microbit-tecnologia-1eso/01_activity1)
 
