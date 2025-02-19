@@ -1,6 +1,6 @@
 # LEDs parpadeantes
 
-## hejhrwe @unplugged
+## Objetivo @unplugged
 
 Enciende y apaga un LED constantemente
 
