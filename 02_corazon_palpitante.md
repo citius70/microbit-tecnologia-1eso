@@ -1,6 +1,6 @@
 # Corazón palpitante
 
-## Programa un Corazón Palpitante @unplugged
+## Programa un corazón palpitante @unplugged
 
 Codifica los LEDs en el @boardname@ para conseguir esta animación 💖
 
