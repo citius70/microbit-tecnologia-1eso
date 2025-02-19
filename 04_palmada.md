@@ -2,15 +2,15 @@
 
 ## {Introducción @unplugged}
 
-The new @boardname@s have a microphone to help them detect sound 🎤
+El @boardname@ tiene un micrófono para detectar sonido 🎤.
 
-Let's learn how to use a clap 👏 to switch your @boardname@'s lights on and off!
+Veamos como usar una palmada 👏 para encender los LEDs del @boardname@.
 
 ![Clap lights banner message](/static/mb/projects/clap-lights.png)
 
-## {Setting up the sound input}
+## {Configurando la entrada de sonido}
 
-► From the ``||input:Input||`` category, find the ``||input:on [loud] sound||`` container and add it to your workspace.
+► Desde la categoría ``||input:Entrada||``, encuentra el contenedor ``||input:al detectar el sonido [alto]||`` y añádelo a tu trabajo.
 
 ```blocks
 // @highlight
@@ -19,11 +19,11 @@ input.onSound(DetectedSound.Loud, function () {
 })
 ```
 
-## {Creating a lightsOn variable}
+## {Crear una variable}
 
-Let's begin by creating a [__*variable*__](#variable "a holder for information that may change") to keep track of whether the @boardname@'s lights are on or off.
+Comenzamos a crear una [__*variable*__](#variable "un contenedor de información que puede cambiar") para mantener un seguimiento de si las luces están encendidas, o no.
 
-► In the ``||variables:Variables||`` category, click on ``Make a Variable...`` and make a variable named ``lightsOn``.
+► En la categoría ``||variables:Variables||`` , click en ``Crear una variable...`` and crea una variable llamada  ``lucesOn``.
 
 ## {Displaying LEDs part 1}
 
