@@ -19,7 +19,8 @@
         "02_leds_parpadeantes.md",
         "03_brujula.md",
         "04_palmada.md",
-        "05_botones.md"
+        "05_botones.md",
+        "06_temperatura.md"
     ],
     "testFiles": [
         "test.ts"
