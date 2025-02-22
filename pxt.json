@@ -18,7 +18,8 @@
         "01_primeros_pasos.md",
         "02_leds_parpadeantes.md",
         "03_brujula.md",
-        "04_palmada.md"
+        "04_palmada.md",
+        "05_botones.md"
     ],
     "testFiles": [
         "test.ts"
