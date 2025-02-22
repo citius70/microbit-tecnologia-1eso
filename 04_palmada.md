@@ -23,20 +23,20 @@ input.onSound(DetectedSound.Loud, function () {
 
 Comenzamos a crear una [__*variable*__](#variable "un contenedor de información que puede cambiar") para mantener un seguimiento de si las luces están encendidas, o no.
 
-► En la categoría ``||variables:Variables||`` , click en ``Crear una variable...`` and crea una variable llamada  ``lucesOn``.
+► En la categoría ``||variables:Variables||`` , click en ``Crear una variable...`` and crea una variable llamada  ``ligtsOn``.
 
 ## {Mostrando LEDs - Parte 1}
 
 En este paso, usaremos un bloque [__*si entonces / si no*__](#ifthenelse "runs some code if a Boolean condition is true and different code if the condition is false") statement.
 
 ► Desde la categoría ``||logic:Lógica||``, arrastra un bloque ``||logic:si <verdadero> entonces / si no||``  and colócalo en el contenedor ``||input:al detectar el sonido [alto]||``.  
-► Busca en la categoría ``||variables:Variables||``. Encuentra la variable ``||variables:lucesOn||`` y colócala dentro del valor   ``||logic:<verdadero>||`` en la declararación ``||logic:si <verdadero> entonces / si no||`` .
+► Busca en la categoría ``||variables:Variables||``. Encuentra la variable ``||variables:ligtsOn||`` y colócala dentro del valor   ``||logic:<verdadero>||`` en la declararación ``||logic:si <verdadero> entonces / si no||`` .
 
 ```blocks
-let lucesOn = 0
+let ligtsOn = 0
 input.onSound(DetectedSound.Loud, function () {
     // @highlight
-    if (lucesOn) {
+    if (ligtsOn) {
     	
     } else {
     	
@@ -51,9 +51,9 @@ input.onSound(DetectedSound.Loud, function () {
 💡 Por ejemplo, enciende las luces exteriores. 🎨
 
 ```blocks
-let lucesOn = 0
+let ligtsOn = 0
 input.onSound(DetectedSound.Loud, function () {
-    if (lucesOn) {
+    if (ligtsOn) {
         // @highlight
     	basic.showLeds(`
             # # # # #
@@ -70,12 +70,12 @@ input.onSound(DetectedSound.Loud, function () {
 ## {Limpiando la escena}
 
 ► Desde ``||basic:Básico||``, busca ``||basic:borrar la pantalla||`` y colócala en la  **zona inferior** de la declaración ``||logic:si entonces / si no||`` .  
-💡 Esto apagará la pantalla si ``lucesOn`` no es **verdadero**.
+💡 Esto apagará la pantalla si ``ligtsOn`` no es **verdadero**.
 
 ```blocks
-let lucesOn = 0
+let lightsOn = 0
 input.onSound(DetectedSound.Loud, function () {
-    if (lucesOn) {
+    if (ligtsOn) {
     	basic.showLeds(`
             # # # # #
             # . . . #
@@ -92,20 +92,20 @@ input.onSound(DetectedSound.Loud, function () {
 
 ## {Configurando la variable lucesOn}
 
-Al igual que accionamos un interruptor de luz, cada vez que aplaudimos, queremos **cambiar** la variable ``lucesOn`` al **opuesto** de lo que era antes.
+Al igual que accionamos un interruptor de luz, cada vez que aplaudimos, queremos **cambiar** la variable ``ligtsOn`` al **opuesto** de lo que era antes.
 
-► Desde ``||variables:Variables||``, localiza ``||variables:fijar [lucesOn] a [0]||`` y colócala en la  **zona superior** de tu contenedor ``||input:al detectar el sonido [alto] ||`` .  
-► Desde la categoría ``||logic:Lógica||``, busque el operador ``||logic:not <>||`` y úselo para **reemplazar el ``[0]``** en ``||variables:fijar [lucesOn] a [0]||``.
+► Desde ``||variables:Variables||``, localiza ``||variables:fijar [ligtsOn] a [0]||`` y colócala en la  **zona superior** de tu contenedor ``||input:al detectar el sonido [alto] ||`` .  
+► Desde la categoría ``||logic:Lógica||``, busque el operador ``||logic:not <>||`` y úselo para **reemplazar el ``[0]``** en ``||variables:fijar [ligtsOn] a [0]||``.
 
 ► Desde ``||variables:Variables||``, toma ``||variables:lucesON||`` y ajústalo a la **parte vacía** del operador ``||logic:not <>||``.
 
 
 ```blocks
-let lucesOn = false
+let ligtsOn = 0
 input.onSound(DetectedSound.Loud, function () {
     // @highlight
-    lightsOn = !(lucesOn)
-    if (lucesOn) {
+    lightsOn = !(ligtsOn)
+    if (ligtsOn) {
     	basic.showLeds(`
             # # # # #
             # . . . #
@@ -119,30 +119,30 @@ input.onSound(DetectedSound.Loud, function () {
 })
 ```
 
-## {Testing in the simulator}
+## {Probando en el simulador}
 
-► Check out the simulator!  
-► Click on the pink slider bar beneath the microphone icon and drag it up and down.  
-💡 Right now, your @boardname@ thinks that anything above 128 is loud. Every time the sound goes > 128, your lights should switch on/off.
+► Comprueba el simulador!  
+► Haz click en la barra rosa bajo el icomno del micrófono y deslízala arriba y abajo.  
+💡 Ahora, el @boardname@ piensa que cualquier sonido por encima del nivel 128 es alto. Cada vez que el sonido es mayor (>) de 128, las luces deberían encender/apagar.
 
-## {Set loud sound threshold}
+## {Establecer el umbral de sonido alto}
 
-Your @boardname@ might detect sounds when you don't want it to. Setting a [__*sound threshold*__](#soundThreshold "a number for how loud a sound needs to be to trigger an event. 0 = silence to 255 = maximum noise") could help 🔉🔊
+ Es posible que @boardname@ detecte sonidos cuando no lo desees. Establecer un [__*umbral de sonido*__](#soundThreshold "a number for how loud a sound needs to be to trigger an event. 0 = silence to 255 = maximum noise") podría ayudar 🔉🔊
 
-► Click on the ``||input:Input||`` category. A new category should show up beneath it called ``||input:...more||``.  
-► From ``||input:...more||``, grab ``||input:set [loud] sound threshold to [128]||`` and snap it into your **empty** ``||basic:on start||`` container.  
-💡 Try to change the value of your sound threshold so that every time you clap, your lights will turn on if they are off and vice versa.
+► Click en la categoría ``||input:Entrada||``. Debería aparecer una nueva categoría debajo llamada ``||input:...más||``.  
+► Desde ``||input:...más||``, arastra ``||input:establecer el umbral de sonido [alto] al valor [128]||`` y colócala en tu contenedor **vacío** ``||basic:al iniciar|`` .  
+💡 Intenta cambiar el valor del umbral de sonido para que cada vez que aplaudas, tus luces se enciendan si están apagadas y viceversa.
 
 ```blocks
 // @highlight
 input.setSoundThreshold(SoundThreshold.Loud, 150)
 ```
 
-## {Testing, round 2}
+## {Probrando por 2ª vez}
 
-Don't forget to test your code in the simulator!
+No olvides probar tu código en el simulador.
 
-If you have a new @boardname@ (the one with the **shiny gold** logo at the top), download this code and try it out!
+Si tienes un nuevo @boardname@ (el que tiene el logo **dorado brillante** en la parte superior), ¡descarga este código y pruébalo!
 
 ```blocks
 let lightsOn = false
