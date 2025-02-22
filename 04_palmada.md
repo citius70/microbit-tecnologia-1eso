@@ -25,18 +25,18 @@ Comenzamos a crear una [__*variable*__](#variable "un contenedor de información
 
 ► En la categoría ``||variables:Variables||`` , click en ``Crear una variable...`` and crea una variable llamada  ``lucesOn``.
 
-## {Displaying LEDs part 1}
+## {Mostrando LEDs - Parte 1}
 
-In this step, we'll be using an [__*if then / else*__](#ifthenelse "runs some code if a Boolean condition is true and different code if the condition is false") statement.
+En este paso, usaremos un bloque [__*si entonces / si no*__](#ifthenelse "runs some code if a Boolean condition is true and different code if the condition is false") statement.
 
-► From the ``||logic:Logic||`` category, grab an ``||logic:if <true> then / else||`` block and snap it into your ``||input:on [loud] sound||`` container.  
-► Look in the ``||variables:Variables||`` category. Find the new ``||variables:lightsOn||`` variable and snap it in to **replace** the ``||logic:<true>||`` value in your ``||logic:if <true> then / else||`` statement.
+► Desde la categoría ``||logic:Lógica||``, arrastra un bloque ``||logic:si <verdadero> entonces / si no||``  and colócalo en el contenedor ``||input:al detectar el sonido [alto]||``.  
+► Busca en la categoría ``||variables:Variables||``. Encuentra la variable ``||variables:lucesOn||`` y colócala dentro del valor   ``||logic:<verdadero>||`` en la declararación ``||logic:si <verdadero> entonces / si no||`` .
 
 ```blocks
-let lightsOn = 0
+let lucesOn = 0
 input.onSound(DetectedSound.Loud, function () {
     // @highlight
-    if (lightsOn) {
+    if (lucesOn) {
     	
     } else {
     	
@@ -44,16 +44,16 @@ input.onSound(DetectedSound.Loud, function () {
 })
 ```
 
-## {Displaying LEDs part 2}
+## {Mostrando LEDs - Parte 2}
 
-► From ``||basic:Basic||``, grab ``||basic:show leds||`` and snap it into the **top container** of your ``||logic:if then / else||`` statement.  
-► Set the lights to a pattern you like!  
-💡 In the hint, we chose to turn on all of the outside lights. Feel free to make your own design 🎨
+► Desde ``||basic:Básico||``, arrastra ``||basic:mostrar leds||`` y colócala en la **zona superior** de la declaración ``||logic:si entonces / si no||``.  
+► Configura las luces como te gusten. 
+💡 Por ejemplo, enciende las luces exteriores. 🎨
 
 ```blocks
-let lightsOn = 0
+let lucesOn = 0
 input.onSound(DetectedSound.Loud, function () {
-    if (lightsOn) {
+    if (lucesOn) {
         // @highlight
     	basic.showLeds(`
             # # # # #
@@ -67,15 +67,15 @@ input.onSound(DetectedSound.Loud, function () {
 })
 ```
 
-## {Clearing the screen}
+## {Limpiando la escena}
 
-► From ``||basic:Basic||``, find ``||basic:clear screen||`` and snap it into the **bottom container** of your ``||logic:if then / else||`` section.  
-💡 This will turn the display off if ``lightsOn`` is **not** ``true``.
+► Desde ``||basic:Básico||``, busca ``||basic:borrar la pantalla||`` y colócala en la  **zona inferior** de la declaración ``||logic:si entonces / si no||`` .  
+💡 Esto apagará la pantalla si ``lucesOn`` no es **verdadero**.
 
 ```blocks
-let lightsOn = 0
+let lucesOn = 0
 input.onSound(DetectedSound.Loud, function () {
-    if (lightsOn) {
+    if (lucesOn) {
     	basic.showLeds(`
             # # # # #
             # . . . #
@@ -90,20 +90,22 @@ input.onSound(DetectedSound.Loud, function () {
 })
 ```
 
-## {Setting the lightsOn variable}
+## {Configurando la variable lucesOn}
 
-Just like we'd toggle a light switch, each time we clap, we want to **flip** the variable ``lightsOn`` to the **opposite** of what it was before.
+Al igual que accionamos un interruptor de luz, cada vez que aplaudimos, queremos **cambiar** la variable ``lucesOn`` al **opuesto** de lo que era antes.
 
-► From ``||variables:Variables||``, locate ``||variables:set [lightsOn] to [0]||`` and snap it in at the **very top** of your ``||input:on [loud] sound||`` container.  
-► From the ``||logic:Logic||`` category, find the ``||logic:not <>||`` operator and use it to **replace the ``[0]``** in ``||variables:set [lightsOn] to [0]||``.  
-► From ``||variables:Variables||``, grab ``||variables:lightsOn||`` and snap it into the **empty part** of the ``||logic:not <>||`` operator.
+► Desde ``||variables:Variables||``, localiza ``||variables:fijar [lucesOn] a [0]||`` y colócala en la  **zona superior** de tu contenedor ``||input:al detectar el sonido [alto] ||`` .  
+► Desde la categoría ``||logic:Lógica||``, busque el operador ``||logic:not <>||`` y úselo para **reemplazar el ``[0]``** en ``||variables:fijar [lucesOn] a [0]||``.
+
+► Desde ``||variables:Variables||``, toma ``||variables:lucesON||`` y ajústalo a la **parte vacía** del operador ``||logic:not <>||``.
+
 
 ```blocks
-let lightsOn = false
+let lucesOn = false
 input.onSound(DetectedSound.Loud, function () {
     // @highlight
-    lightsOn = !(lightsOn)
-    if (lightsOn) {
+    lightsOn = !(lucesOn)
+    if (lucesOn) {
     	basic.showLeds(`
             # # # # #
             # . . . #
