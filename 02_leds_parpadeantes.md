@@ -18,38 +18,30 @@ basic.forever(() => {
 
 El concepto es muy simple: enciende el LED, espera un rato, apaga el LED, espera de nuevo y se repite de nuevo.
 
-Comencemos añadiendo una línea de código que enciende el LED en la posición (0, 0) ``||led.graficar x=0, y=0||``.
+Comencemos añadiendo una línea de código que enciende el LED en la posición (0, 0) ``||led.graficar x=0, y=0||``. Colócalo dentro de `` ||basic:para siempre||`` 
 
 ```blocks
-led.plot(0, 0)
+basic.forever(()=> {
+    led.plot(0,0)
+}
 ```
 
 Prueba el programa en el simulador para asegurarte de su funcionamiento.
 
 ## Paso 2
-Ahora, añadamos código para `pausar` 1 segundo (1000 milisegundos) y apagar el LED. ``||basic.pausa ms(1000)||``.
+
+Ahora, añadamos código para mantener el LED encendido durante 1 segundo (1000 milisegundos) ``||basic:pausa ms (1000)||`` y apagar el LED ``||led.ocultar x=0, y=0||``.
 
 ```blocks
-led.plot(0, 0)
-basic.pause(1000)
-led.unplot(0,0)
+basic.forever(() => {
+    led.plot(0, 0)
+    basic.pause(1000)
+    led.unplot(0,0)
+})
 ```
+
 ## Paso 3
-Hemos encendido y apagado el LED una sola vez. Añadamos otra pausa y encendamos el LED otra vez.
-
-```blocks
-led.plot(0, 0)
-basic.pause(1000)
-led.unplot(0, 0)
-basic.pause(1000)
-led.plot(0, 0)
-```
-
-¡Atención!. El actual código funciona, pero hace que el LED parpadea una sola vez.
-
-## Paso 4
-
-Para solucionarlo, vamos a utilizar el bucle `por siempre` y mover el código dentro de él para que se repita una y otra vez. Puedes eliminar el bloque `plot` ya que no es necesario ahora.
+Como ves, el funcionamiento no es correcto. Para solucionarlo añadamos otra pausa.
 
 ```blocks
 basic.forever(() => {
@@ -59,10 +51,12 @@ basic.forever(() => {
     basic.pause(1000)
 })
 ```
+Muy bien, estás preparado para continuar con algún desafío.
+
 
 ## ~avatar boothing
 
-Muy bien, estás preparado para continuar con algún desafío.
+
 
 ## ~
 
