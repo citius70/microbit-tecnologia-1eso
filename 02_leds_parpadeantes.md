@@ -54,12 +54,6 @@ basic.forever(() => {
 Muy bien, estás preparado para continuar con algún desafío.
 
 
-## ~avatar boothing
-
-
-
-## ~
-
 ## Desafío 1
 
 Mostremos una "cara sonriente". Comenzaremos con los ojos en este desafío y lo completaremos en el Desafío 2.
