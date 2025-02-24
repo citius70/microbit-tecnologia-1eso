@@ -20,7 +20,8 @@
         "03_brujula.md",
         "04_palmada.md",
         "05_botones.md",
-        "06_temperatura.md"
+        "06_temperatura.md",
+        "07_dado.md"
     ],
     "testFiles": [
         "test.ts"
