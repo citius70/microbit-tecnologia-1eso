@@ -1,9 +1,11 @@
-# Dados @unplugged
+# Dados 
+
+## Objetivo @unplugged
+
+¡Bienvenido! Este tutorial te ayudará a crear un dado. ¡Empecemos! 
 
 
-¡Bienvenido! Este tutorial te ayudará a crear un dado. ¡Empecemos!
-
-## Paso 1
+## Paso 1 
 
 Vamos a crear una condición para cuando el @boardname@ sea agitado. ``||input: si [agitado]||``
 
