@@ -1,96 +1,114 @@
-# Mood Radio
+# Comunicación por ondas de radio
 
-## @description Una mini aplicación de mensajería de estados de ánimo usando la radio
+## @description Una mini aplicación de mensajeríausando la radio
 
-![@nombredelabord@ enviando estados de ánimo](/static/mb/projects/mood-radio.png)
+![@boardname@ enviando estados de ánimo](/static/mb/projects/mood-radio.png)
 
-Este proyecto utiliza las ondas de [radio](/referencia/radio) para enviar mensajes a otor @boardname@.
+Este proyecto utiliza las ondas de [radio](/referencia/radio) para enviar mensajes a otros @boardname@.
 
-Cuando pulses ``A`` en ti @boardname@, tus amigos verán un mensaje en sus @boardname@ una cara **sonriente**. Si pulsas ``B``, verán otro mensaje distinto.
+Cuando pulses el botón **``A``** en tu @boardname@, tus amigos verán un mensaje en sus @boardname@ una cara **sonriente**😀. Si pulsas **``B``**, verán otro mensaje distinto.
 
-## Enviar un smiley
+## Paso 1: Enviando un smiley 😀
 
 El @boardname@ no puede entender el estado de ánimo, pero es bastante bueno con los números. De hecho, puede enviar números
 entre @boardname@s usando la antena de radio, igual que un teléfono puede enviar mensajes de texto.
 
-Vamos a añadir bloques que envíen un número cuando se pulse el botón ``A``. Suponemos que `0` es el «código de humor» para enviar **smiley**.
+Para poder comunicarse, los @boardname@ tienen que estar en el mismo **grupo**. Por ello, al iniciar establece ``||radio: radio establecer grupo [17]||``. (Puedes elegir otro número de grupo)
 
-Bloques
-radio.setGroup(1)
+Ahora, añadimos bloques que envíen un número determinado cuando se pulse el botón **``A``**. Suponemos que **`0`** es el «código de humor» para enviar **smiley**.😀
+
+```blocks
+radio.setGroup(17)
 input.onButtonPressed(Button.A, function () {
     radio.sendNumber(0)
     basic.showIcon(IconNames.Happy)
 })
 ```
+## Paso 2: Enviando una cara enfadada 😠
 
-## Recibiendo un smiley
+Añadir otro estado de ánimo a nuestra aplicación de mensajería se hace de forma similar. Decidimos que el «código de humor» de `1` significa **cara enfadada**. Podemos añadir un evento de botón ``B`` que envíe ese código.
 
-Añadimos un bloque ``||radio:on received number||`` que ejecutará código cada vez que llegue un nuevo mensaje de «estado de ánimo».
-La variable ``receivedNumber`` contiene el valor numérico que se ha enviado. Como hemos decidido que
-`0` es **sonriente**, añadimos una sentencia condicional ``||logic:if then||`` para mostrar este icono.
-
-Bloquea
-radio.onReceivedNumber(function (receivedNumber) {
-    if (receivedNumber == 0) {
-        basic.showIcon(IconNames.Happy)
-    }
-})
-```
-
-## Enviando un ceño fruncido
-
-Añadir otro estado de ánimo a nuestra aplicación de mensajería se hace de forma similar. Decidimos que el «código de humor» de `1` significa **fruncir el ceño**. Podemos añadir un evento de botón ``B`` que envíe ese código.
-
-``bloques
+```blocks
 input.onButtonPressed(Button.B, function () {
     radio.sendNumber(1)
     basic.showIcon(IconNames.Sad)
 })
 ```
 
-Si el evento ``||radio:on received number|||`` ocurre, añadimos otra sentencia condicional ``||logic:if then|||`` para manejar el «código de humor» **frowny**.
+## Paso 3: Recibiendo un smiley 😀
 
-Bloquea
+Ahora vamos a programar el @boardname@ de tu compañero o compañera. Establece el mismo número de grupo al iniciar (en este caso, 17). 
+
+Añadimos un bloque ``||radio:al recibir radio||`` que ejecutará código cada vez que llegue un nuevo mensaje de «estado de ánimo».
+La variable ``receivedNumber`` contiene el valor numérico que se ha enviado. Como hemos decidido que
+`0` es **sonriente**, añadimos una sentencia condicional ``||logic:si entonces||`` para mostrar este icono.
+
+```blocks
+radio.setGroup(17)
 radio.onReceivedNumber(function (receivedNumber) {
+    music.setVolume(255)
     if (receivedNumber == 0) {
         basic.showIcon(IconNames.Happy)
+        music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
+    }
+})
+```
+
+## Paso 4: Recibiendo una cara enfadada 😠
+
+¿Qué ocurre si pulsamos el botón **B**?
+
+Si el evento ``||radio:al recibir radio (receivedNumber)|||`` ocurre, añadimos otra sentencia condicional ``||logic:si entonces|||`` para mostrar una cara enfadada.
+
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    music.setVolume(255)
+    if (receivedNumber == 0) {
+        basic.showIcon(IconNames.Happy)
+        music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
+
     }
     if (receivedNumber == 1) {
-        basic.showIcon(Iconos.Triste)
+        basic.showIcon(IconNames.Sad)
+        music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
+
     }
 })
 ```
 
 Ya está. Descarga tu código en múltiples @nombredelaplataforma y ¡pruébalo!
 
-## Desafíos
+## Final
 
-Intenta añadir un nuevo código y usa el evento ``||input:on shake||`` para enviarlo.
+Envía los programas a los @boardname@ y prueba el funcionamiento.
 
 ## Programa completo
 
-``bloques
-radio.setGroup(1)
+```blocks
+radio.setGroup(17)
 input.onButtonPressed(Button.A, function () {
     radio.sendNumber(0)
     basic.showIcon(IconNames.Happy)
 })
 input.onButtonPressed(Button.B, function () {
     radio.sendNumber(1)
-    basic.showIcon(Iconos.Triste)
+    basic.showIcon(IconNames.Sad)
 })
 radio.onReceivedNumber(function (receivedNumber) {
+    music.setVolume(255)
     if (receivedNumber == 0) {
         basic.showIcon(IconNames.Happy)
+        music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
+
     }
     if (receivedNumber == 1) {
-        basic.showIcon(Iconos.Triste)
+        basic.showIcon(IconNames.Sad)
+        music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
+
     }
 })
 ```
 
-```paquete
+```package
 radio
 ```
-
-Traducción realizada con la versión gratuita del traductor DeepL.com
