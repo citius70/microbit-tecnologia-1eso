@@ -2,11 +2,11 @@
 
 ## Una mini aplicación de mensajería usando la radio
 
-![@boardname@ enviando estados de ánimo](/static/mb/projects/mood-radio.png)
-
 Este proyecto utiliza las ondas de [radio](/reference/radio) para enviar mensajes a otros @boardname@.
 
 Cuando pulses el botón **``A``** en tu @boardname@, tus amigos verán un mensaje en sus @boardname@ una cara **sonriente**😀. Si pulsas **``B``**, verán otro mensaje distinto.
+
+![@boardname@ enviando estados de ánimo](/static/mb/projects/mood-radio.png)
 
 ## Paso 1: Enviando un smiley 😀
 
