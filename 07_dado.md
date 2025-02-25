@@ -2,7 +2,7 @@
 
 ## Objetivo @unplugged
 
-¡Bienvenido! Este tutorial te ayudará a crear un dado. ¡Empecemos! 
+¡Bienvenido! Este tutorial te ayudará a crear un dado. ¡Empecemos! 🎲
 
 ![A microbit dice](/imagenes/dado.png)
 
