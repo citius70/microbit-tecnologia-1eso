@@ -84,7 +84,7 @@ Envía los programas a los @boardname@ y prueba el funcionamiento.
 
 ## Programa completo
 
-```blocks
+```sim
 radio.setGroup(17)
 input.onButtonPressed(Button.A, function () {
     radio.sendNumber(0)
