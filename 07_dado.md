@@ -1,9 +1,10 @@
-# Dados 
+# Dado
 
 ## Objetivo @unplugged
 
 ¡Bienvenido! Este tutorial te ayudará a crear un dado. ¡Empecemos! 
 
+![A microbit dice](/imagenes/dado.png)
 
 ## Paso 1 
 
