@@ -1,4 +1,4 @@
-# Dados @unplugged@
+# Dados @unplugged
 
 
 ¡Bienvenido! Este tutorial te ayudará a crear un dado. ¡Empecemos!
