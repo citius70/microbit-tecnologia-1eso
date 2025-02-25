@@ -91,15 +91,15 @@ music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.Playba
 });
 
 ```
+## Paso 6
+
+Ahora tenemos que repetir los mismos pasos para cuando **puntos** es 4. Si **puntos** es 4 mostraremos `4 LEDs y oto sonido distinto.
 
 
-Ahora tenemos que repetir los mismos pasos para si **roll** es 3. Si **roll** es 3 mostraremos `4` en el dado.
-
-
-``bloquea
+```blocks
 input.onGesture(Gesture.Shake, () => {
-    let tirada = randint(0, 6);
-    if (tirada == 5) {
+    let puntos = randint(1, 6);
+    if (puntos == 6 {
         basic.showLeds(`
 . # . # .
 . . . . .
@@ -107,7 +107,7 @@ input.onGesture(Gesture.Shake, () => {
 . . . . .
 . # . # .`);
     }
-    else if (roll == 4) {
+    else if (puntos == 5) {
         basic.showLeds(`
 . . . . .
 . # . # .
@@ -115,7 +115,7 @@ input.onGesture(Gesture.Shake, () => {
 . # . # .
 . . . . .`);
     }
-    else if (roll == 3) {
+    else if (puntos == 4) {
         basic.showLeds(`
 . . . . .
 . # . # .
@@ -126,13 +126,14 @@ input.onGesture(Gesture.Shake, () => {
 });
 ```
 
+## Paso 7
 
 Repitamos también estos pasos para mostrar el 3, el 2 y el 1 en el dado. ¡Ya casi hemos terminado con nuestros dados!
 
 ```bloques
 input.onGesture(Gesture.Shake, () => {
-    let tirada = randint(0, 6);
-    if (tirada == 5) {
+    let puntos = randint(1, 6);
+    if (puntos == 6) {
         basic.showLeds(`
 . # . # .
 . . . . .
@@ -140,7 +141,7 @@ input.onGesture(Gesture.Shake, () => {
 . . . . .
 . # . # .`);
     }
-    else if (roll == 4) {
+    else if (puntos == 5) {
         basic.showLeds(`
 . . . . .
 . # . # .
@@ -148,7 +149,7 @@ input.onGesture(Gesture.Shake, () => {
 . # . # .
 . . . . .`);
     }
-    else if (roll == 3) {
+    else if (puntos == 4) {
         basic.showLeds(`
 . . . . .
 . # . # .
@@ -156,7 +157,7 @@ input.onGesture(Gesture.Shake, () => {
 . # . # .
 . . . . .`);
     }
-    else if (roll == 2) {
+    else if (puntos == 3) {
         basic.showLeds(`
 # . . . .
 . . . . .
@@ -164,7 +165,7 @@ input.onGesture(Gesture.Shake, () => {
 . . . . .
 . . . . #`);
     }
-    else if (roll == 1) {
+    else if (puntos == 2) {
         basic.showLeds(`
 . . . . .
 . # . . .
@@ -183,11 +184,6 @@ input.onGesture(Gesture.Shake, () => {
 });
 ```
 
+## Final
 
-## ~avatar avatar
-
-Excelente, ¡ya estás listo para continuar con los [retos](/lecciones/dados/retos)!
-
-## ~
-
-Traducción realizada con la versión gratuita del traductor DeepL.com
+Excelente, ¡has creado un dado electrónico!
