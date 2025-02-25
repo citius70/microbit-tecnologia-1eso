@@ -130,7 +130,7 @@ input.onGesture(Gesture.Shake, () => {
 
 Repitamos también estos pasos para mostrar el 3, el 2 y el 1 en el dado. ¡Ya casi hemos terminado con nuestros dados!
 
-```bloques
+```blocks
 input.onGesture(Gesture.Shake, () => {
     let puntos = randint(1, 6);
     if (puntos == 6) {
@@ -187,3 +187,5 @@ input.onGesture(Gesture.Shake, () => {
 ## Final
 
 Excelente, ¡has creado un dado electrónico!
+
+Envía el programa a @boardname@.
