@@ -15,34 +15,34 @@ basic.forever(function() {
 })
 ```
 
-## Paso 2: Traza el nivel de luz
+## Paso 2: Trazar el nivel de luz
 
-Ahora, vamos a ``||led:trazar un gráfico de barras||`` que muestre el de las ``|variables:luzActual||`` para el ``||input:nivel de luz||``. Establece el límite en 255.
+Ahora, vamos a ``||led:trazar un gráfico de barras||`` que muestre el nivel de ``|variables:luzActual||`` para el ``||input:nivel de luz||``. Establece el límite en 255.
 
 ```blocks
-let lectura = 0
+let luzActual = 0
 basic.forever(function() {
-    reading = input.lightLevel()
-    led.plotBarGraph(lectura, 255)
+    luzActual = input.lightLevel()
+    led.plotBarGraph(luzActual, 255)
 })
 ```
 
-## Paso 2: Visualiza el nivel de luz
+## Paso 3: Visualiza el nivel de luz
 
 Ve al simulador y observa como cambia el gráfico de barras mientras ajustas el control del nivel de luz.
 
-## Paso 3: Mostrar la lectura como número
+## Paso 4: Mostrar la lectura como número
 
-Añade el código a ``||basic:show a number||`` para el valor de ``||variables:reading||``
-``|logic:if||`` se pulsa el ``||input:botón A||``.
+Añade el código a ``||basic:enseñar un número||`` para el valor de ``||variables:luzActual||``
+``|logic:si||`` se pulsa el ``||input:botón A||``.
 
-Bloques
-let lectura = 0
+```blocks
+let luzActual = 0
 basic.forever(function() {
-    lectura = input.lightLevel()
+    luzActual = input.lightLevel()
     led.plotBarGraph(lectura, 255)
     if (input.buttonIsPressed(Button.A)) {
-        basic.showNumber(lectura)
+        basic.showNumber(luzActual)
     }
 })
 ```
