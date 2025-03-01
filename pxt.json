@@ -23,7 +23,8 @@
         "06_temperatura.md",
         "07_dado.md",
         "08_radio.md",
-        "09_ldr.md"
+        "09_ldr.md",
+        "10_sonido_pajaro.md"
     ],
     "testFiles": [
         "test.ts"
