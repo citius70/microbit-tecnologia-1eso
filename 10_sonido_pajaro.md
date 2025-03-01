@@ -2,6 +2,8 @@
 
 ## Paso 1
 
+Reproduce el sonido de un pájaro.
+
 ```blocks
 basic.forever(function () {
     music.play(music.createSoundExpression(
