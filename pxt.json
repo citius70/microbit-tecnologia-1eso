@@ -24,7 +24,8 @@
         "07_dado.md",
         "08_radio.md",
         "09_ldr.md",
-        "10_sonido_pajaro.md"
+        "10_sonido_pajaro.md",
+        "11_luces_azar.md"
     ],
     "testFiles": [
         "test.ts"
