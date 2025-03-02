@@ -49,6 +49,4 @@ basic.forever(function() {
 
 ## Descarga y prueba
 
-Descarga el código en tu @nombredelaplataforma@ y ¡mide el nivel de luz a tu alrededor!
-
-Traducción realizada con la versión gratuita del traductor DeepL.com
+Descarga el código en tu @boardname@ y ¡mide el nivel de luz a tu alrededor!
