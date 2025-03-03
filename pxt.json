@@ -27,7 +27,9 @@
         "10_sonido_pajaro.md",
         "11_luces_azar.md",
         "12_caza_tesoro.md",
-        "13_buscar_tesoro_emisor.md"
+        "13_buscar_tesoro_emisor.md",
+        "13_buscar_tesoro_receptor.md",
+        "14_conteo.md"
     ],
     "testFiles": [
         "test.ts"
