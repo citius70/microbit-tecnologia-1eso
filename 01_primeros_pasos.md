@@ -1,6 +1,6 @@
 # Primeros pasos con @boardname@
 
-ard!
+Bienvenid@s. En esta actividad veremos algunas **funciones básicas** que puede realizar ``@boardname@``. 
 
 ## Objetivo @unplugged
 
