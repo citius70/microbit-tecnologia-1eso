@@ -23,7 +23,7 @@ La programación de este proyecto implicará varios pasos:
     * a continuación, el nombre del segundo rasgo y su recuento,
     * finalmente, se mostrará el número total contado en ambos botones. 
 
-4. El evento ``||input:al agitar|||`` puede ser programado para borrar los datos y empezar de nuevo.
+4. El evento ``||input: al [mantener pulsado] el logotipo ||`` puede ser programado para borrar los datos y empezar de nuevo.
 
 
 ## Paso 1: bloque ``||basic:al iniciar|||``
@@ -77,12 +77,12 @@ input.onButtonPressed(Button.B, () => {
 })
 ```
 
-### Paso 4: bloque  ``||input: al presionar el botón [A+B]||``
+## Paso 4: bloque  ``||input: al presionar el botón [A+B]||``
 
-1. El bloque ``||input:al presionar el botón [A+B]||`` se utiliza para mostrar el nombre y el recuento de cada rasgo y el total de observaciones realizadas mostrando la información en la pantalla LED.
-2. Tras el cálculo aparece el nombre ``hombres`` seguido de su valor.
-3. Lo mismo se hace para ``mujeres``.
-4. Las 2 últimas líneas muestran la etiqueta `«TOTAL»` y su valor calculado. 
+1. El bloque ``||input:al presionar el botón [A B]||`` se utiliza para mostrar el nombre y el recuento de cada rasgo y el total de observaciones realizadas mostrando la información en la pantalla LED.
+2. Tras el cálculo aparece el nombre ``H: `` seguido de su valor. (H de hombres)
+3. Lo mismo se hace para ``M: ``. (M de mujeres)
+4. Las 2 últimas líneas muestran la etiqueta ``T: ``  y su valor calculado. (T de total)
  
 ```blocks
 let hombres = 0
@@ -95,25 +95,186 @@ input.onButtonPressed(Button.AB, () => {
     basic.showNumber(hombres)
     basic.showString("M: ")
     basic.showNumber(mujeres)
-    basic.showString("TOTAL: ")
+    basic.showString("T: ")
     basic.showNumber(total)
 })
 ```
 
-### Paso 5: bloque  ``||input: si agitado||``
+## Paso 5: bloque  ``||input: al [mantener pulsado] el logotipo ||``
 
-1. El evento ``||basic:si agitado||`` se utiliza para borrar el valor de todas las variables.
+1. El evento ``||input: al [mantener pulsado] el logotipo ||``` se utiliza para borrar el valor de todas las variables.
 2. Esto se hace volviendo a poner los valores de cada una de las variables a `0`. 
 
 ¡Atención!: Este procedimiento borra todos los datos del @boardname@.
+
  
 ```blocks
 let hombres = 0
 let mujeres = 0
 let total = 0
-input.onGesture(Gesture.Shake, () => {
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     hombres = 0
     mujeres = 0
     total = 0
 })
+```
+
+## Paso 5: Programa mejorado
+
+En la ayuda puedes observar un programa más completo que mejorará su funcionamiento.
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    hombres += 1
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showNumber(hombres)
+    basic.pause(1000)
+    basic.clearScreen()
+})
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
+    basic.showIcon(IconNames.Skull)
+    hombres = 0
+    mujeres = 0
+    total = 0
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . . . #
+        . . . . .
+        . . . . .
+        `)
+})
+input.onButtonPressed(Button.AB, function () {
+    basic.clearScreen()
+    total += hombres + mujeres
+    basic.showString("T:")
+    basic.showNumber(total)
+    basic.pause(1000)
+    basic.clearScreen()
+    basic.showString("H:")
+    basic.showNumber(hombres)
+    basic.pause(1000)
+    basic.clearScreen()
+    basic.showString("M:")
+    basic.showNumber(mujeres)
+    basic.pause(1000)
+    total = 0
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . . . #
+        . . . . .
+        . . . . .
+        `)
+})
+input.onButtonPressed(Button.B, function () {
+    mujeres += 1
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . #
+        . . . . .
+        . . . . .
+        `)
+    basic.showNumber(mujeres)
+    basic.pause(1000)
+    basic.clearScreen()
+})
+let total = 0
+let mujeres = 0
+let hombres = 0
+hombres = 0
+mujeres = 0
+total = 0
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    # . . . #
+    . . . . .
+    . . . . .
+    `)
+```
+
+```sim
+input.onButtonPressed(Button.A, function () {
+    hombres += 1
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showNumber(hombres)
+    basic.pause(1000)
+    basic.clearScreen()
+})
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
+    basic.showIcon(IconNames.Skull)
+    hombres = 0
+    mujeres = 0
+    total = 0
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . . . #
+        . . . . .
+        . . . . .
+        `)
+})
+input.onButtonPressed(Button.AB, function () {
+    basic.clearScreen()
+    total += hombres + mujeres
+    basic.showString("T:")
+    basic.showNumber(total)
+    basic.pause(1000)
+    basic.clearScreen()
+    basic.showString("H:")
+    basic.showNumber(hombres)
+    basic.pause(1000)
+    basic.clearScreen()
+    basic.showString("M:")
+    basic.showNumber(mujeres)
+    basic.pause(1000)
+    total = 0
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . . . #
+        . . . . .
+        . . . . .
+        `)
+})
+input.onButtonPressed(Button.B, function () {
+    mujeres += 1
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . #
+        . . . . .
+        . . . . .
+        `)
+    basic.showNumber(mujeres)
+    basic.pause(1000)
+    basic.clearScreen()
+})
+let total = 0
+let mujeres = 0
+let hombres = 0
+hombres = 0
+mujeres = 0
+total = 0
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    # . . . #
+    . . . . .
+    . . . . .
+    `)
 ```
