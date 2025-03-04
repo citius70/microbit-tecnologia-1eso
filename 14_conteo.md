@@ -1,4 +1,8 @@
-# Reacuento de hombres/mujeres
+# Recuento de hombres/mujeres
+
+## Objetivo
+
+El propósito de esta actividad es recabar información del número de **hombres y de mujeres** que cruzan nuestro instituto hacia el centro de Pontevedra.
 
 ## Configuración
 
@@ -17,7 +21,7 @@ https://youtu.be/NNZEMiJHY2o
 
 ### ~
 
-## Code
+## Código
 
 ### Entorno de programación MakeCode
 
@@ -38,11 +42,11 @@ basic.showString("CONTADOR DE PERSONAS")
 
 Las variables se declaran en el evento ``||basic:al iniciar||`` y se les asigna un valor inicial de `0`.
 
-### en el evento: Botón «A» Pulsado
+### en el evento: ``al presionar el botón [A]``
 
 1. El evento ``||input:al presionar el botón A||`` se utilizará para contar el primer rasgo (HOMBRE) añadiendo `1` a la variable ``hombres`` cada vez que se pulse el botón.
 2. El evento ``||variables:cambiar hombre por 1||`` se utiliza para incrementar el número de hombres en 1. Esto se puede intrepretar como: "a la variable ``hombres``, súmale 1".
-3. La siguiente línea se utiliza para mostrar el valor actual de ``rasgo1``.
+3. La siguiente línea se utiliza para mostrar el valor actual de ``hombres``.
  
 ```blocks
 let hombres = 0
@@ -54,7 +58,7 @@ input.onButtonPressed(Button.A, () => {
 })
 ```
 
-### en el evento: Botón «B» Pulsado
+### en el evento: ``al presionar el botón [B]``
 
 1. El código para ``||input:al presionar el botón B||`` es el mismo que el de ``||input:al presionar el botón A||`` excepto que se usa para mantener una cuenta en ``mujeres``.
  
@@ -67,7 +71,7 @@ input.onButtonPressed(Button.B, () => {
 })
 ```
 
-### en el evento:  Botón «A+B» Pulsado
+### en el evento:  ``al presionar el botón [A+B]``
 
 1. El evento ``||input:al presionar el botón A+B||`` se utiliza para mostrar el nombre y el recuento de cada rasgo y el total de observaciones realizadas mostrando la información en la pantalla LED.
 2. Tras el cálculo aparece el nombre ``hombres`` seguido de su valor.
@@ -81,16 +85,16 @@ let total = 0
 
 input.onButtonPressed(Button.AB, () => {
     total += hombres + mujeres
-    basic.showString(H:»)
+    basic.showString("H:")
     basic.showNumber(hombres)
-    basic.showString("M:»)
+    basic.showString("M:")
     basic.showNumber(mujeres)
-    basic.showString(« TOTAL»)
+    basic.showString("TOTAL")
     basic.showNumber(total)
 })
 ```
 
-### en el evento Shake
+### en el evento: ``si agitado``
 
 1. El evento ``||basic:al agitar||`` se utiliza para borrar el valor de todas las variables.
 2. Esto se hace volviendo a poner los valores de cada una de las variables a `0`. 
