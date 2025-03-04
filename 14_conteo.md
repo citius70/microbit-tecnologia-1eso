@@ -1,4 +1,4 @@
-# Conteo
+# Reacuento de hombres/mujeres
 
 ## Configuración
 
@@ -25,66 +25,66 @@ https://youtu.be/NNZEMiJHY2o
 
 ### en el evento; Al iniciar
 
-1. Nombra el proyecto, «Contador de rasgos de población».
-2. El evento ``||basic:on start||`` mostrará el título y propósito del microbit en mayúsculas, «POPULATION TRAIT COUNTER». El texto se pone en el bloque ``||basic:show string|||`` (el título se pone en el evento ``||basic:on start|||`` para que cuando se inicie el microbit muestre para qué está programado. Se hace en mayúsculas porque es más fácil de leer cuando se muestra en la pantalla LED).
-3. Desde la caja de herramientas ``||variables:Variables||`` cree variables llamadas ``trait1``, ``trait2``, y ``total``. Éstas se utilizarán como contadores para llevar la cuenta de los rasgos contados. Las variables se nombran para describir lo que van a almacenar. Las variables se nombran normalmente usando letras minúsculas y/o dígitos. Si se trata de un nombre de 2 palabras, por lo general se nombran usando camelCaps (sin espacios, pero con una mayúscula donde comienza la segunda palabra. Por ejemplo ``totalCount``, ``randNumber``, etc.)
+1. Nombra el proyecto, «Contador de personas».
+2. El evento ``||basic:on start||`` mostrará el título y propósito del microbit en mayúsculas, «CONTADOR DE PERSONAS». El texto se pone en el bloque ``||basic:show string|||`` (el título se pone en el evento ``||basic:on start|||`` para que cuando se inicie el microbit muestre para qué está programado. Se hace en mayúsculas porque es más fácil de leer cuando se muestra en la pantalla LED).
+3. Desde la caja de herramientas ``||variables:Variables||`` cree variables llamadas ``hombre``, ``mujer``, y ``total``. Éstas se utilizarán como contadores para llevar la cuenta de los rasgos contados. Las variables se nombran para describir lo que van a almacenar. Las variables se nombran normalmente usando letras minúsculas y/o dígitos. Si se trata de un nombre de 2 palabras, por lo general se nombran usando camelCaps (sin espacios, pero con una mayúscula donde comienza la segunda palabra. Por ejemplo ``totalCount``, ``randNumber``, etc.)
  
 ```blocks
-let rasgo1 = 0
-let rasgo2 = 0
+let hombres = 0
+let mujeres = 0
 let total = 0
-basic.showString("CONTADOR DE CARACTERES DE POBLACIÓN")
+basic.showString("CONTADOR DE PERSONAS")
 ```
 
 Las variables se declaran en el evento ``||basic:al iniciar||`` y se les asigna un valor inicial de `0`.
 
 ### en el evento: Botón «A» Pulsado
 
-1. El evento ``||input:al presionar el botón A||`` se utilizará para contar el primer rasgo añadiendo `1` a ``rasgo1`` cada vez que se pulse el botón.
-2. El evento ``||variables:cambiar rasgo1 por 1||`` se utiliza para incrementar el número. Esto se puede intrepretar como: "a la varaiable rasgo1, súmale 1".
+1. El evento ``||input:al presionar el botón A||`` se utilizará para contar el primer rasgo (HOMBRE) añadiendo `1` a la variable ``hombres`` cada vez que se pulse el botón.
+2. El evento ``||variables:cambiar hombre por 1||`` se utiliza para incrementar el número de hombres en 1. Esto se puede intrepretar como: "a la variable ``hombres``, súmale 1".
 3. La siguiente línea se utiliza para mostrar el valor actual de ``rasgo1``.
  
 ```blocks
-let rasgo1 = 0
+let hombres = 0
 
 
 input.onButtonPressed(Button.A, () => {
-    rasgo1 += 1
-    basic.showNumber(rasgo1)
+    hombres += 1
+    basic.showNumber(hombres)
 })
 ```
 
 ### en el evento: Botón «B» Pulsado
 
-1. El código para ``||input:al presionar el botón B||`` es el mismo que el de ``||input:al presionar el botón A||`` excepto que se usa para mantener una cuenta en ``rasgo2``.
+1. El código para ``||input:al presionar el botón B||`` es el mismo que el de ``||input:al presionar el botón A||`` excepto que se usa para mantener una cuenta en ``mujeres``.
  
 ```blocks
-let rasgo2 = 0
+let mujeres = 0
 
 input.onButtonPressed(Button.B, () => {
-    rasgo2 += 1
-    basic.showNumber(rasgo2)
+    mujeres += 1
+    basic.showNumber(mujeres)
 })
 ```
 
 ### en el evento:  Botón «A+B» Pulsado
 
 1. El evento ``||input:al presionar el botón A+B||`` se utiliza para mostrar el nombre y el recuento de cada rasgo y el total de observaciones realizadas mostrando la información en la pantalla LED.
-2. Tras el cálculo aparece el nombre rasgo1 seguido de su valor.
-3. Lo mismo se hace para rasgo2.
+2. Tras el cálculo aparece el nombre ``hombres`` seguido de su valor.
+3. Lo mismo se hace para ``mujeres``.
 4. Las 2 últimas líneas muestran la etiqueta `«TOTAL»` y su valor calculado. 
  
 ```blocks
-let rasgo1 = 0
-let rasgo2 = 0
+let hombres = 0
+let mujeres = 0
 let total = 0
 
 input.onButtonPressed(Button.AB, () => {
-    total += rasgo1 + rasgo2
-    basic.showString(«RASGO 1»)
-    basic.showNumber(rasgo1)
-    basic.showString(« RASGO 2»)
-    basic.showNumber(rasgo2)
+    total += hombres + mujeres
+    basic.showString(H:»)
+    basic.showNumber(hombres)
+    basic.showString("M:»)
+    basic.showNumber(mujeres)
     basic.showString(« TOTAL»)
     basic.showNumber(total)
 })
@@ -96,12 +96,12 @@ input.onButtonPressed(Button.AB, () => {
 2. Esto se hace volviendo a poner los valores de cada una de las variables a `0`. 
  
 ```blocks
-let rasgo1 = 0
-let rasgo2 = 0
+let hombres = 0
+let mujeres = 0
 let total = 0
 input.onGesture(Gesture.Shake, () => {
-    rasgo1 = 0
-    rasgo2 = 0
+    hombres = 0
+    mujeres = 0
     total = 0
 })
 ```
@@ -109,20 +109,6 @@ input.onGesture(Gesture.Shake, () => {
 
 ### ~hint
 
-#### Warning
+#### Atención
 
-This procedure could be problematic if the @boardname@ is shaken to much while it is used in counting.
-
-### ~
-
-## Extensions
-
-This project could easily be modified to keep track of scores for 2 different teams. What other ideas can you think of that counters could be used for?
-
-## ~button /courses/ucp-science/population/resources
-NEXT: Resources
-## ~
-
-<br/>
-Adapted from "[Population Trait Data Counter](https://drive.google.com/open?id=1CC5uhIoZK4Q67vU5Ldwna6GEeZYXNDYzgO8BUUjPuwI)" by [C Lyman](http://utahcoding.org) [![CC BY-NC-SA](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-
+Este procedimiento borra todos los datos del @boardname@.
