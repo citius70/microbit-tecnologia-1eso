@@ -2,18 +2,30 @@
 
 ## Objetivo @unplugged
 
-Bienvenid@s. En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@. 
+Bienvenid@s. ``[basic.showNumber(0)]``   ``[let txt = "text"]`` En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@. 
 
 ## Paso 1: Mostrar texto
 
-```blocks
+```sim
+basic.showString("It's my birthday! Press A to see my age.)
+input.onButtonPressed(Button.A, function () {
+    basic.showNumber(14)
+})
+```
+
+```namespaces
+basic.showNumber(0)
+input.onButtonPressed(() => {})
+```
+
+```block
 let count = 0
 for (let i = 0; i < 4; i++) {
     count += 1
 }
 ```
 
-```block
+```blocks
 basic.showNumber(5)
 ```
 
