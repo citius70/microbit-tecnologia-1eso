@@ -1,12 +1,14 @@
 # Primeros pasos con @boardname@
 
-## It's time to code! @showhint
-
-Let's get real bright. We're going to make all the lights flash on your board!
+ard!
 
 ## Objetivo @unplugged
 
 Bienvenid@s. En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@. 
+
+## It's time to code! @showhint
+
+Let's get real bright. We're going to make all the lights flash on your bo
 
 ## Paso 1: Mostrar texto en la pantalla 5x5 LEDs
 
