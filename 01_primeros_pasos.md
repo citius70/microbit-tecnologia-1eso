@@ -2,11 +2,30 @@
 
 ## Objetivo @unplugged
 
-Bienvenid@s. En esta actividad veremos algunas funciones que puede realizar @boerdname@. 
+Bienvenid@s. En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@. 
 
-## Paso 1
+## Paso 1: Mostrar texto
+
+```blocks
+let count = 0
+for (let i = 0; i < 4; i++) {
+    count += 1
+}
+```
+
+```block
+basic.showNumber(5)
+```
+
+```blocks
+basic.showString("HELLO!")
+```
 
 Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` dento de ``||basic:al iniciar||``. Reemplaza el texto **``"Hola"``** con tu **nombre**. ¿Viste cómo se desplaza el texto?
+
+```sim
+basic.showString("Alberto")
+```
 
 ```blocks
 basic.showString("Alberto")
