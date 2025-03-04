@@ -1,20 +1,26 @@
 # Primeros pasos con @boardname@
 
+## It's time to code! @showhint
+
+Let's get real bright. We're going to make all the lights flash on your board!
+
 ## Objetivo @unplugged
 
-Bienvenid@s. ``[basic.showNumber(0)]``   ``[let txt = "text"]`` En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@. 
+Bienvenid@s. En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@. 
 
-## Paso 1: Mostrar texto
+## Paso 1: Mostrar texto en la pantalla 5x5 LEDs
 
-```sim
-basic.showString("It's my birthday! Press A to see my age.)
-input.onButtonPressed(Button.A, function () {
-    basic.showNumber(14)
-})
-```
 
-```namespaces
-basic.showNumber(0)
+```cards
+basic.showString("Hello")
+basic.showLeds(`
+    # # . # #
+    # # . # #
+    . # # # .
+    . # . # .
+    . # . # .
+    `
+)
 input.onButtonPressed(() => {})
 ```
 
