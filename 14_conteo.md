@@ -2,32 +2,31 @@
 
 ## Objetivo
 
-El propósito de esta actividad es recabar información del número de **hombres y de mujeres** que cruzan nuestro instituto hacia el centro de Pontevedra.
+El propósito de esta actividad es hacer un recuento del número de **hombres y de mujeres** que cruzan nuestro instituto hacia el centro de Pontevedra.
 
 ## Configuración
 
-1. La codificación de este proyecto implicará varios pasos. 
-2. El bloque ``||basic:al iniciar|||`` mostrará el título del proyecto. También declarará las variables que se utilizarán en el proyecto. Los botones **A** y **B** están programados para sumar 1 a la cuenta del rasgo asociado a ese botón. 
-3. Los botones **A** y **B** están programados para mostrar el nombre del primer rasgo y el recuento. A continuación, el nombre del segundo rasgo y su recuento. Finalmente se mostrará el número total contado en ambos botones. 
-4. El evento ``||input:al agitar|||`` puede ser programado para borrar los datos y empezar de nuevo.
+La programación de este proyecto implicará varios pasos:
 
-### ~ hint
+1. El bloque ``||basic:al iniciar|||``:
 
-#### Ejemplo de experimento de rasgos de población
+    * mostrará el título del proyecto.
+    * también declarará las variables que se utilizarán en el proyecto.
+    
+2. Los botones ``||input:al presionar el botón [A]||`` y ``||input:al presionar el botón [B]||``:
+    
+    * están programados para sumar 1 al contador del rasgo asociado a ese botón. A para el hombre y B para la mujer.
 
-Vea este vídeo sobre cómo realizar un experimento de rasgos poblacionales.
+2. El bloque  ``||input:al presionar el botón A+B||`` está programado para:
 
-https://youtu.be/NNZEMiJHY2o
+    * mostrar el nombre del primer rasgo y el recuento.
+    * a continuación, el nombre del segundo rasgo y su recuento,
+    * finalmente, se mostrará el número total contado en ambos botones. 
 
-### ~
+3. El evento ``||input:al agitar|||`` puede ser programado para borrar los datos y empezar de nuevo.
 
-## Código
 
-### Entorno de programación MakeCode
-
-1. Abre el editor MakeCode micro:bit en un navegador en: @homeurl@.
-
-### en el evento; Al iniciar
+### Paso 1: en el evento; Al iniciar
 
 1. Nombra el proyecto, «Contador de personas».
 2. El evento ``||basic:on start||`` mostrará el título y propósito del microbit en mayúsculas, «CONTADOR DE PERSONAS». El texto se pone en el bloque ``||basic:show string|||`` (el título se pone en el evento ``||basic:on start|||`` para que cuando se inicie el microbit muestre para qué está programado. Se hace en mayúsculas porque es más fácil de leer cuando se muestra en la pantalla LED).
