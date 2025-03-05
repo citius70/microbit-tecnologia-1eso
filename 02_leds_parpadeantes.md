@@ -1,8 +1,10 @@
 # LEDs parpadeantes
 
-## Objetivo @unplugged
+## Objetivo @showdialog
 
-Enciende y apaga un LED constantemente
+Vamos a encender y apagar LEDs utilizando sus coordenadas.
+
+![Coordenadas LEDs](imagenes/microbit-led-coords.png)
 
 ```blocks
 basic.forever(() => {
