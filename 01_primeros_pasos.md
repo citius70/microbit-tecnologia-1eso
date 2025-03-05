@@ -6,6 +6,8 @@ Bienvenid@s. En esta actividad veremos algunas **funciones básicas** que puede 
 
 Aprenderás a utilizar los botones A y B, la pantalla LEDs, gestos, enviar el programa al micro:bit...
 
+![Heart shape in the LEDs](/static/mb/projects/flashing-heart/sim.gif)
+
 ## Paso 1: Mostrar texto en la pantalla 5x5 LEDs
 
 Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` dentro de ``||basic:al iniciar||``.
