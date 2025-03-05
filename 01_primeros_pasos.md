@@ -1,47 +1,16 @@
 # Primeros pasos con @boardname@
 
-Bienvenid@s. En esta actividad veremos algunas **funciones básicas** que puede realizar ``@boardname@``. 
+## Objetivo @showdialog
 
-## Objetivo @unplugged
+Bienvenid@s. En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@.
 
-Bienvenid@s. En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@. 
-
-## It's time to code! @showhint
-
-Let's get real bright. We're going to make all the lights flash on your bo
+Aprenderás a utilizar los botones A y B, la pantalla LEDs, gestos, enviar el programa al micro:bit...
 
 ## Paso 1: Mostrar texto en la pantalla 5x5 LEDs
 
+Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` dentro de ``||basic:al iniciar||``.
 
-```cards
-basic.showString("Hello")
-basic.showLeds(`
-    # # . # #
-    # # . # #
-    . # # # .
-    . # . # .
-    . # . # .
-    `
-)
-input.onButtonPressed(() => {})
-```
-
-```block
-let count = 0
-for (let i = 0; i < 4; i++) {
-    count += 1
-}
-```
-
-```blocks
-basic.showNumber(5)
-```
-
-```blocks
-basic.showString("HELLO!")
-```
-
-Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` dento de ``||basic:al iniciar||``. Reemplaza el texto **``"Hola"``** con tu **nombre**. ¿Viste cómo se desplaza el texto?
+Reemplaza el texto **``"Hola"``** con tu **nombre**. ¿Viste cómo se desplaza el texto?
 
 ```sim
 basic.showString("Alberto")
@@ -51,7 +20,7 @@ basic.showString("Alberto")
 basic.showString("Alberto")
 ```
 
-## Paso 2
+## Paso 2: Botón A
 
 El texto dejó de desplazarse. Vamos a intentar que tu nombre aparezca cuando pulsas el **botón A**:
 
@@ -63,25 +32,27 @@ input.onButtonPressed(Button.A, () => {
 });
 ```
 
-## Paso 3
+## Paso 3: Botón B
 
 Coloca algunos bloques para mostrar un **``smiley``** cuando se pulse el botón **`B`**. 
 
 * Para ello, arrastra el bloque ``||basic:mostrar LEDs||`` dentro de otro bloque ``||input:al presionar el botón: B||`` (Usa el desplegable para encontrar **`B`**).
 
+    * Dibuja una cara sonriente emn la pantalla de 25 (5x5) LEDs.
+
 ```blocks
 input.onButtonPressed(Button.B, () => {
     basic.showLeds(`
-    . . . . .
+    # # . # #
     . # . # .
-    . . . . .
+    . . # . .
     # . . . #
     . # # # .
     `)
 })
 ```
 
-## Paso 4
+## Paso 4: Gestos (agitar)
 
 Ahora, haz que se muestre un **número al azar** al *agitar* 🪇  el @boardname@.
 
@@ -93,9 +64,9 @@ input.onGesture(Gesture.Shake, () => {
 })
 ```
 
-## Paso 5
+## Paso 5: Programar un dado electrónico
 
-Un dado típico muestra valores de `1` a `6`. Así que, en  ``||math:escoger al azar||``, ¡no olvides elegir bien los valores mínimo 1 y máximo 6!
+Un dado típico 🎲 muestra valores de `1` a `6`. Así que, en  ``||math:escoger al azar de (1) a (6)||``, ¡no olvides elegir bien los valores mínimo 1 y máximo 6!
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -103,15 +74,14 @@ input.onGesture(Gesture.Shake, () => {
 })
 ```
 
-## Paso 6: Enviar el programa a @boardname@
+## Paso 6: Enviar el programa a micro:bit
 
 Ahora vamos a **transferir el programa** a la tarjeta controladora @boardname@.
 
 Conecta la tarjeta al ordenador con un cable USB y haz clic en ``|Descargar|``. Guarda el programa en la unidad **@drivename@**. Esto transfiere tu código al @boardname@.
 
-## Paso 7
 
-En el @boardname@, pulse el botón **`A`** para desplazar el texto. Pulse el botón **`B`** para mostrar un `smile`. Agite el @boardname@ y mira qué número ha elegido.
+En el @boardname@, pulse el botón **`A`** para desplazar el texto. Pulse el botón **`B`** para mostrar un `smile`. Agita el @boardname@ y mira qué número ha elegido.
 
 ## Final
 
