@@ -19,18 +19,26 @@ input.onGesture(Gesture.Shake, () => {
 
 Debido a que la temperatura va a cambiar de manera frecuente hay que ir guardando su valor en una ``variable``.
 
-* En la categoría ``||Variables: Variables||``  ``|(crea una variable)|`` llamada
+* En la categoría ``||Variables: Variables||``  haz click en ``||crea una variable||`` y ponle el nombre de ``temp``.
 
-Midamos la temperatura y luego almacenemos en ella una variable `temp`. La temperatura se mide en **Celsius**, por lo que un valor de `29` equivale a 29 grados Celsius.
+Midamos la temperatura y luego almacenemos en ella una variable `temp`.
+
+    * La temperatura se mide en **Celsius**, por lo que un valor de `29` equivale a 29 grados Celsius.
+
+## Paso 3
+
+Ahora hagamos que el valor de la temperatura medido por el sensor de @boardname@ se almacene (se fije) en la variable ``temp``.
+
+ ``||variables: fijar [temp] a (temperatura ºC)||``
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     let temp = input.temperature()
 })
 ```
-## {Paso 3}
+## Paso 4
 
-Muestra el valor de `temp` en la pantalla.
+Hagamos que el valor de la variable ``temp`` se muestre en pantalla utilizando ``||basic: mostra número (temp)||``.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -39,13 +47,11 @@ input.onGesture(Gesture.Shake, () => {
 })
 ```
 
-* haz clic en ejecutar para ver si el código funciona como se espera.
+* Haz clic en el botón ``SHAKE`` para ver si el código funciona como se espera.
 
+## Paso 5
 
-
-## {Paso 4}
-
-Agreguemos el código para mostrar el texto **`Temperatura =  `**  con un bloque `mostrar cadena`. Modifique el bloque `mostrar cadena` para mostrar el texto lentamente en un intervalo de `300` milisegundos.
+Agreguemos el código ``||basic: mostrar cadena||``  para mostrar el texto **`Temperatura =  `**  con un bloque `mostrar cadena`. Modifique el bloque `mostrar cadena` para mostrar el texto lentamente en un intervalo de `300` milisegundos.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -55,8 +61,8 @@ input.onGesture(Gesture.Shake, () => {
     })
 ```
 
-* Ejecute el código para ver si funciona como se espera.
+* Ejecuta el código para ver si funciona como se espera.
 
 ## Paso 5
 
-Transfiere el código al @boardname@.
+Transfiere el código al @boardname@ y comprueba el funcionamiento.
