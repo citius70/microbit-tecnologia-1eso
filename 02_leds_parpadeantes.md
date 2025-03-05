@@ -43,7 +43,7 @@ basic.forever(() => {
 ```
 
 ## Paso 3
-Como ves, el funcionamiento no es correcto. Para solucionarlo añadamos otra pausa.
+Como ves, el funcionamiento no es correcto. Para solucionarlo añadamos otra pausa ``||basic:pausa ms (1000)||`` después de ``||led.ocultar x=0, y=0||``.
 
 ```blocks
 basic.forever(() => {
@@ -53,25 +53,25 @@ basic.forever(() => {
     basic.pause(1000)
 })
 ```
-Muy bien, estás preparado para continuar con algún desafío.
+Muy bien, estás preparado para continuar mejorando el programa.
 
 
-## Desafío 1
+## Paso 4
 
-Mostremos una "cara sonriente". Comenzaremos con los ojos en este desafío y lo completaremos en el Desafío 2.
+Mostremos una "cara sonriente". Comenzaremos con los ojos en este paso.
 
-Añade ``||led.graficar(1,1)||`` y ``||led.graficar(3,1)||`` y debajo ``||led.graficar(2,2)||``. después añade ``||led.ocultar(1,1)||``, ``||led.ocultar(3,1)||`` y ``||plot.ocultar(2,2)||`` después ``||led.pausa ms (1000)||``.
+Añade ``||led.graficar(1,1)||`` y ``||led.graficar(2,2)||`` y debajo ``||led.graficar(3,1)||`` antes de la pausa. Después añade ``||led.ocultar(1,1)||``, ``||led.ocultar(2,2)||`` y ``||plot.ocultar(3,1)||`` después ``||led.pausa ms (1000)||``.
 
 Cuando esté preparado, no olvides probar el código.
 
 ```blocks
 basic.forever(() => {
-    led.plot(2, 2)
     led.plot(1, 1)
+    led.plot(2, 2)
     led.plot(3, 1)
     basic.pause(1000)
-    led.unplot(2, 2)
     led.unplot(1, 1)
+    led.unplot(2, 2)
     led.unplot(3, 1)
     basic.pause(1000)
 })
@@ -84,8 +84,8 @@ Completa el código para conseguir una "cara sonriente".
 ```sim
 basic.forever(() => {
     led.plot(1, 1)
-    led.plot(3, 1)
     led.plot(2, 2)
+    led.plot(3, 1)
     led.plot(0, 3)
     led.plot(4, 3)
     led.plot(1, 4)
@@ -93,8 +93,31 @@ basic.forever(() => {
     led.plot(3, 4)
     basic.pause(1000)
     led.unplot(1, 1)
-    led.unplot(3, 1)
     led.unplot(2, 2)
+    led.unplot(3, 1)
+    led.unplot(0, 3)
+    led.unplot(4, 3)
+    led.unplot(1, 4)
+    led.unplot(2, 4)
+    led.unplot(3, 4)
+    basic.pause(1000)
+})
+```
+
+```blocks
+basic.forever(() => {
+    led.plot(1, 1)
+    led.plot(2, 2)
+    led.plot(3, 1)
+    led.plot(0, 3)
+    led.plot(4, 3)
+    led.plot(1, 4)
+    led.plot(2, 4)
+    led.plot(3, 4)
+    basic.pause(1000)
+    led.unplot(1, 1)
+    led.unplot(2, 2)
+    led.unplot(3, 1)
     led.unplot(0, 3)
     led.unplot(4, 3)
     led.unplot(1, 4)
