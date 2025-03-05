@@ -1,19 +1,25 @@
-# Actividad de temperatura
+# Medidor de temperatura
 
-Mide la temperatura con la placa @boardname@
+## Objetivo @showdialog
 
-¡Bienvenido! Esta actividad te enseñará cómo medir la temperatura en el @boardname@. ¡Empecemos!
+¡Bienvenido! Esta actividad te enseñará cómo medir la temperatura en el @boardname@. ¡Empecemos! 🌡️
+
+![Outdoor thermometer](/static/courses/ucp-science/temperature/heat-of-day.jpg)
 
 
-## {Paso 1}
+## Paso 1
 
-Queremos mostrar la temperatura al agitar. Para hacer esto, necesitamos registrar el evento `si agitado` que se ejecutará cada vez que el usuario agite el @boardname@; En el navegador web, haga clic en el botón denominado "SHAKE" debajo del simulador para generar un evento de vibración.
+Queremos mostrar la temperatura al agitar. Para hacer esto, necesitamos añadir el evento ``||input:si agitado||`` que se ejecutará cada vez que el usuario agite el @boardname@.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     })
 ```
-## {Paso 2}
+## Paso 2
+
+Debido a que la temperatura va a cambiar de manera frecuente hay que ir guardando su valor en una ``variable``.
+
+* En la categoría ``||Variables: Variables||``  ``|(crea una variable)|`` llamada
 
 Midamos la temperatura y luego almacenemos en ella una variable `temp`. La temperatura se mide en **Celsius**, por lo que un valor de `29` equivale a 29 grados Celsius.
 
