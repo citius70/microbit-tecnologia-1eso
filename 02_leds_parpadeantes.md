@@ -4,7 +4,7 @@
 
 Vamos a encender y apagar LEDs utilizando sus coordenadas.
 
-![Coordenadas LEDs](/docs/static/microbit-led-coords.png)
+![Coordenadas LEDs](/static/microbit-led-coords.png)
 
 ```blocks
 basic.forever(() => {
