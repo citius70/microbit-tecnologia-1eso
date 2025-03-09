@@ -35,12 +35,6 @@ Prueba el programa en el simulador para asegurarte de su funcionamiento.
 
 Ahora, añadamos código para mantener el LED encendido durante 1 segundo (1000 milisegundos) ``||basic:pausa ms (1000)||`` y apagar el LED ``||led.ocultar x=0, y=0||``.
 
-```sim
-basic.showString("It's my birthday! Press A to see my age.)
-input.onButtonPressed(Button.A, function () {
-    basic.showNumber(14)
-})
-```
 
 ```blocks
 basic.forever(() => {
@@ -99,7 +93,7 @@ basic.forever(() => {
 })
 ```
 
-## Desafío 2
+## Paso 5
 
 Completa el código para conseguir una "cara sonriente".
 
