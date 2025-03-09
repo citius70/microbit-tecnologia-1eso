@@ -21,15 +21,13 @@ Debido a que la temperatura va a cambiar de manera frecuente hay que ir guardand
 
 * En la categoría ``||Variables: Variables||``  haz click en ``||crea una variable||`` y ponle el nombre de ``temp``.
 
-Midamos la temperatura y luego almacenemos en ella una variable `temp`.
 
-    * La temperatura se mide en **Celsius**, por lo que un valor de `29` equivale a 29 grados Celsius.
 
 ## Paso 3
 
-Ahora hagamos que el valor de la temperatura medido por el sensor de @boardname@ se almacene (se fije) en la variable ``temp``.
+Ahora hagamos que el valor de la temperatura medido por el sensor de @boardname@ se almacene (se fije) en la variable ``temp``  ``||variables: fijar [temp] a (temperatura ºC)||``
 
- ``||variables: fijar [temp] a (temperatura ºC)||``
+    * La temperatura se mide en **Celsius**, por lo que un valor de `29` equivale a 29 grados Celsius.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -38,7 +36,7 @@ input.onGesture(Gesture.Shake, () => {
 ```
 ## Paso 4
 
-Hagamos que el valor de la variable ``temp`` se muestre en pantalla utilizando ``||basic: mostra número (temp)||``.
+Hagamos que el valor de la variable ``temp`` se muestre en pantalla utilizando ``||basic: mostrar número (temp)||``.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
