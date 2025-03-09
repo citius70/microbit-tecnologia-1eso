@@ -4,7 +4,6 @@
 
 Vamos a encender y apagar LEDs utilizando sus coordenadas.
 
-![Coordenadas LEDs](/static/microbit-led-coords.png)
 
 ```blocks
 basic.forever(() => {
@@ -21,6 +20,8 @@ basic.forever(() => {
 El concepto es muy simple: enciende el LED, espera un rato, apaga el LED, espera de nuevo y se repite de nuevo.
 
 Comencemos añadiendo una línea de código que enciende el LED en la posición (0, 0) ``||led.graficar x=0, y=0||``. Colócalo dentro de `` ||basic:para siempre||`` 
+
+![Coordenadas LEDs](/static/microbit-led-coords.png)
 
 ```blocks
 basic.forever(()=> {
