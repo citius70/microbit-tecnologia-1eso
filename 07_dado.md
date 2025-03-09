@@ -20,6 +20,9 @@ input.onGesture(Gesture.Shake, () => {
 
 Necesitamos mostrar un **valor aleatorio del 1 al 6** en nuestro dado ``||math: escoger al azar de [1] a [6]||`` y guardarlo (fijarlo) en una variable. Así que vamos a crear una variable local llamada ``||variables: puntos||``.
 
+De este modo, quedará el bloque así ``||Variables: fijar [puntos] a (escoger al azar de (1) a (6))||``
+
+
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     let puntos = randint(1, 6)
@@ -28,7 +31,23 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Paso 3
 
-Hagamos que se enciendan 6 LEDs ``||basic: mostrar LEDS||`` en el caso de que al agitar salga el nº 6 (``||variables: puntos = 6||``)
+Hagamos que se enciendan 6 LEDs ``||basic: mostrar LEDS||`` en el caso de que al agitar salga el nº 6 (``||variables: puntos = 6||``).
+
+Es decir, dentro   ``||logic: si (puntos) = 6 entonces||``  colocar ``||basic:showLeds||``
+
+```sim
+input.onGesture(Gesture.Shake, () => {
+    let puntos = randint(1, 6);
+    if (puntos == 6) {
+        basic.showLeds(`
+# . . . #
+. . . . .
+# . . . #
+. . . . .
+# . . . #`);
+    }
+});
+```
 
 
 ```blocks
@@ -36,11 +55,11 @@ input.onGesture(Gesture.Shake, () => {
     let puntos = randint(1, 6);
     if (puntos == 6) {
         basic.showLeds(`
-. # . # .
+# . . . #
 . . . . .
-. # . # .
+# . . . #
 . . . . .
-. # . # .`);
+# . . . #`);
     }
 });
 ```
@@ -49,16 +68,31 @@ input.onGesture(Gesture.Shake, () => {
 
 Vamos a programar para que cada vez que salga el nº 6, se emita un sonido con ``||music:reproduce secuencia [risa] en modo [hasta que termine]||``
 
+```sim
+input.onGesture(Gesture.Shake, () => {
+    let puntos = randint(1, 6);
+    if (puntos == 6) {
+        basic.showLeds(`
+# . . . #
+. . . . .
+# . . . #
+. . . . .
+# . . . #`);
+music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
+    }
+});
+```
+
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     let puntos = randint(1, 6);
     if (puntos == 6) {
         basic.showLeds(`
-. # . # .
+# . . . #
 . . . . .
-. # . # .
+# . . . #
 . . . . .
-. # . # .`);
+# . . . #`);
 music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
     }
 });
@@ -69,31 +103,55 @@ music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.Playb
 
 Creamos una nueva condición para cuando salga un 5. Para ello, haz que se enciendan 5 LEDs y se emita otro sonido cuando salga un 5. Coloca estos bloque dentro del espacio ``||si no||``
 
+```sim
+input.onGesture(Gesture.Shake, ()=> {
+    let puntos = randint(1, 6);
+    if (puntos == 6) {
+        basic.showLeds(`
+# . . . #
+. . . . .
+# . . . #
+. . . . .
+# . . . #`);
+music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
+    }
+    else if (puntos == 5) {
+        basic.showLeds(`
+# . . . #
+. . . . .
+. . # . .
+. . . . .
+# . . . #`);
+music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
+    }
+});
+```
+
 
 ```blocks
 input.onGesture(Gesture.Shake, ()=> {
     let puntos = randint(1, 6);
     if (puntos == 6) {
         basic.showLeds(`
-. # . # .
+# . . . #
 . . . . .
-. # . # .
+# . . . #
 . . . . .
-. # . # .`);
+# . . . #`);
 music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
     }
     else if (puntos == 5) {
         basic.showLeds(`
+# . . . #
 . . . . .
-. # . # .
 . . # . .
-. # . # .
-. . . . .`);
+. . . . .
+# . . . #`);
 music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
     }
 });
-
 ```
+
 ## Paso 6
 
 Ahora tenemos que repetir los mismos pasos para cuando **puntos** es 4. Si **puntos** es 4 mostraremos `4 LEDs y oto sonido distinto.
@@ -104,27 +162,27 @@ input.onGesture(Gesture.Shake, () => {
     let puntos = randint(1, 6);
     if (puntos == 6 {
         basic.showLeds(`
-. # . # .
+# . . . #
 . . . . .
-. # . # .
+# . . . #
 . . . . .
-. # . # .`);
+# . . . #`);
     }
     else if (puntos == 5) {
         basic.showLeds(`
+# . . . #
 . . . . .
-. # . # .
 . . # . .
-. # . # .
-. . . . .`);
+. . . . .
+# . . . #`);
     }
     else if (puntos == 4) {
         basic.showLeds(`
+# . . . #
 . . . . .
-. # . # .
 . . . . .
-. # . # .
-. . . . .`);
+. . . . .
+# . . . #`);
     }
 });
 ```
@@ -138,27 +196,27 @@ input.onGesture(Gesture.Shake, () => {
     let puntos = randint(1, 6);
     if (puntos == 6) {
         basic.showLeds(`
-. # . # .
+# . . . #
 . . . . .
-. # . # .
+# . . . #
 . . . . .
-. # . # .`);
+# . . . #`);
     }
     else if (puntos == 5) {
         basic.showLeds(`
+# . . . #
 . . . . .
-. # . # .
 . . # . .
-. # . # .
-. . . . .`);
+. . . . .
+# . . . #`);
     }
     else if (puntos == 4) {
         basic.showLeds(`
+# . . . #
 . . . . .
-. # . # .
 . . . . .
-. # . # .
-. . . . .`);
+. . . . .
+# . . . #`);
     }
     else if (puntos == 3) {
         basic.showLeds(`
@@ -170,11 +228,11 @@ input.onGesture(Gesture.Shake, () => {
     }
     else if (puntos == 2) {
         basic.showLeds(`
+# . . . .
 . . . . .
-. # . . .
 . . . . .
-. . . # .
-. . . . .`);
+. . . . .
+. . . . #`);
     }
     else {
         basic.showLeds(`
