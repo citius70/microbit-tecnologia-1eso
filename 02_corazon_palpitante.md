@@ -41,7 +41,7 @@ basic.forever(function() {
 
 Mira el @boardname@ en la pantalla. ¿Ves la animación del corazón? ⭐ ¡Buen trabajo! ⭐ 
 
-## Paso 5
+## Paso 4
 
 Coloca un bloque ``||basic: pausa ms (1000)||`` después de cada imagen para ralentizar el paso de una a otra.
 
@@ -64,7 +64,7 @@ basic.forever(function() {
 })
 ```
 
-## Paso 4
+## Paso 5
 
 Ahora conecta tu dispositivo @boardname@ al ordenador y haz clic en el botón ``|Descargar|``.
 
