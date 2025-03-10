@@ -18,7 +18,7 @@ Después en el bloque ``||basic:mostrar leds||``, haz clic en los cuadrados para
 
 ## Paso 2
 
-Arrastra otro bloque ``||basic: mostrar leds||``  debajo del primero.
+Arrastra otro bloque ``||basic: mostrar leds||``  debajo del primero y dibuja un corazón más pequeño.
 
 ```blocks
 basic.forever(function() {
@@ -30,9 +30,9 @@ basic.forever(function() {
         . . # . .`);
     basic.showLeds(`
         . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
+        . # . # .
+        . # # # .
+        . . # . .
         . . . . .`);
 })
 ```
@@ -55,11 +55,11 @@ basic.forever(function() {
         . . # . .`);
     basic.pause(1000)
     basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .`);
+     . . . . .
+    . # . # .
+    . # # # .
+     . . # . .
+    . . . . .`);
     basic.pause(1000)
 })
 ```
