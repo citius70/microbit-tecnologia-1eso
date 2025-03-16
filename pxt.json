@@ -29,7 +29,8 @@
         "12_caza_tesoro.md",
         "13_buscar_tesoro_emisor.md",
         "13_buscar_tesoro_receptor.md",
-        "14_conteo.md"
+        "14_conteo.md",
+        "14_sonido_nivel.md"
     ],
     "testFiles": [
         "test.ts"
