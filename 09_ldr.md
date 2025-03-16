@@ -2,50 +2,58 @@
 
 ## Introducción @unplugged
 
-Este programa crea un medidor de nivel de luz. Utiliza el sensor de luz del @boardname@ para detectar la cantidad de luz.
+Este programa utiliza el **sensor de luz** (LDR) del @boardname@ para:
 
-## Paso 1: Guardar una lectura
+* visualizar gráficamente el **nivel de luz** ambiental,
+* crear una **alarma** que se accione cuando la *luz ambiental disminuya*.
 
-Crea una variable, ``||variables:luzActual||`` en la que vamos a guardar (fijar) el ``||input:nivel luz||`` que te rodea. Haz esto dentro de un bucle ``||basic:para siempre||``.
 
-```blocks
-let luzActual = 0
-basic.forever(function() {
-    luzActual = input.lightLevel()
-})
-```
+## Paso 1: Trazar el nivel de luz en una gráfica
 
-## Paso 2: Trazar el nivel de luz
+Dentro del bloque ``||basic:para siempre||`` vamos a  ``||led:trazar un gráfico de barras||`` que muestre el nivel de  ``||input:nivel de luz||``. 
 
-Ahora, vamos a ``||led:trazar un gráfico de barras||`` que muestre el nivel de ``|variables:luzActual||`` para el ``||input:nivel de luz||``. Establece el límite en 255.
+El sensor de luz del @boardname@ nos devuelve el valor:
 
-```blocks
-let luzActual = 0
-basic.forever(function() {
-    luzActual = input.lightLevel()
-    led.plotBarGraph(luzActual, 255)
-})
-```
+* 0 (mínimo) cuando se encuentra en total oscuridad
 
-## Paso 3: Visualiza el nivel de luz
+* 255 (máximo) cuando la luz ambiental es máxima.
 
-Ve al simulador y observa como cambia el gráfico de barras mientras ajustas el control del nivel de luz.
-
-## Paso 4: Mostrar la lectura como número
-
-Añade el código a ``||basic:enseñar un número||`` para el valor de ``||variables:luzActual||``
-``|logic:si||`` se pulsa el ``||input:botón A||``.
+Por ello, establece el límite de la grafica en 255 para que conincida con el valor máximo medido por el sensor.
 
 ```blocks
-let luzActual = 0
-basic.forever(function() {
-    luzActual = input.lightLevel()
-    led.plotBarGraph(lectura, 255)
-    if (input.buttonIsPressed(Button.A)) {
-        basic.showNumber(luzActual)
+basic.forever(function () {
+    led.plotBarGraph(
+    input.lightLevel(),
+    255
+    )
     }
 })
 ```
+
+Mira el simulador y observa como cambia el gráfico de barras mientras ajustas el control del nivel de luz.
+
+## Paso 2: Mostrar la lectura como número
+
+Vamos a mostrar el nivel de luz en números (de 0 a 255) cuando pulsemos el botón ``|A|``.
+
+Añade el código a ``||basic:enseñar un número||`` para el valor ``||input:nivel de luz||``
+``|logic:si||`` se pulsa el ``||input:botón A||``.
+
+```blocks
+basic.forever(function () {
+    led.plotBarGraph(
+    input.lightLevel(),
+    255
+    )
+    if (input.buttonIsPressed(Button.A)) {
+        basic.showNumber(input.lightLevel())
+    }
+})
+```
+
+## Paso 3: Establecer una alarma cuando oscurezca
+
+
 
 ## Descarga y prueba
 
