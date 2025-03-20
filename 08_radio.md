@@ -1,6 +1,6 @@
 # Comunicación por ondas de radio
 
-# Objetivo @unplugged
+## Objetivo @unplugged
 
 Este proyecto utiliza las ondas de [radio](/reference/radio) para enviar mensajes a otros @boardname@.
 
