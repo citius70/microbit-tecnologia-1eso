@@ -1,6 +1,6 @@
 # Comunicación por ondas de radio
 
-##Objetivo @unplugged
+# Objetivo @unplugged
 
 Este proyecto utiliza las ondas de [radio](/reference/radio) para enviar mensajes a otros @boardname@.
 
@@ -41,7 +41,7 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 
-## Paso 3: Configurando el grupo del emisor
+## Paso 3: Configurando el grupo del receptor
 
 Ahora vamos a programar el @boardname@ de tu compañero o compañera. **Esto lo hará en su ordenador y en su @boardname@**.
 
@@ -55,79 +55,59 @@ radio.setGroup(17)
 
 ```
 
-## Paso 4: Recibiendo los mensajes
+## Paso 4: Recibiendo el mensaje_1
 
-Vamoa a seguir programando el receptor para que reciban los dos mensajes (mensaje_1 y mensaje_2).
+Vamos a seguir programando el receptor para que reciban los dos mensajes (mensaje_1 y mensaje_2) enviados por el emisor.
 
-Añadimos un bloque ``||radio:al recibir radio (cadenaRecibida)||`` que ejecutará código cada vez que llegue un nuevo mensaje de «estado de ánimo».
-La variable ``receivedNumber`` contiene el valor numérico que se ha enviado. Como hemos decidido que
-`0` es **sonriente**, añadimos una sentencia condicional ``||logic:si entonces||`` para mostrar este icono.
+
+Añadimos un bloque ``||radio:al recibir radio (receivedString)||`` (cadena de texto recibida) que ejecutará código cada vez que llegue un nuevo mensaje.
+
+A continuación, colocamos el bloque condicional ``||loops: si <receivedString="mensaje_1¨¨>||`` . Eso se traduciría así "Si el texto recibido es mensaje_1".
+
+Cuando reciba el "mensaje_1" debe mostrar el icono de un 🦆 ``||basic: mostrar icono showIcon(Pato)||``.
+Haz también que que suene la ``||music: melodía||`` Dadadadum.
+
 
 ```blocks
 radio.setGroup(17)
-radio.onReceivedNumber(function (receivedNumber) {
-    music.setVolume(255)
-    if (receivedNumber == 0) {
-        basic.showIcon(IconNames.Happy)
-        music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "mensaje_1") {
+        basic.showIcon(IconNames.Duck)
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Dadadadum), music.PlaybackMode.InBackground)
     }
 })
 ```
 
-## Paso 4: Recibiendo una cara enfadada 😠
+## Paso 5: Recibiendo el mensaje_2
 
-¿Qué ocurre si pulsamos el botón **B**?
+¿Qué ocurre si pulsamos el botón **B** en el emisor? Pues que en el @boardname@ receptor se debe mostrar el icono de una jirafa 🦒 y suene la melodía Animador.
 
-Si el evento ``||radio:al recibir radio (receivedNumber)|||`` ocurre, añadimos otra sentencia condicional ``||logic:si entonces|||`` para mostrar una cara enfadada.
+Para hacerlo, comienza añadiendo una condición nueva haciendo click en el icono ➕ del bloque ``||loops: si||``.
+
+Seguro que sabes terminar este paso.
 
 ```blocks
-radio.onReceivedNumber(function (receivedNumber) {
-    music.setVolume(255)
-    if (receivedNumber == 0) {
-        basic.showIcon(IconNames.Happy)
-        music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
-
-    }
-    if (receivedNumber == 1) {
-        basic.showIcon(IconNames.Sad)
-        music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
-
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "mensaje_1") {
+        basic.showIcon(IconNames.Duck)
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Dadadadum), music.PlaybackMode.InBackground)
+    } else if (receivedString == "mensaje_2") {
+        basic.showIcon(IconNames.Giraffe)
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Entertainer), music.PlaybackMode.InBackground)
     }
 })
 ```
 
-Ya está. Descarga tu código en múltiples @nombredelaplataforma y ¡pruébalo!
 
 ## Final
 
-Envía los programas a los @boardname@ y prueba el funcionamiento.
+Prueba el funcionamiento en el simulador.
+
+Envía los programas a los @boardname@ emisor y receptor y prueba el funcionamiento.
 
 ## Programa completo
 
-```blocks
-radio.setGroup(17)
-input.onButtonPressed(Button.A, function () {
-    radio.sendNumber(0)
-    basic.showIcon(IconNames.Happy)
-})
-input.onButtonPressed(Button.B, function () {
-    radio.sendNumber(1)
-    basic.showIcon(IconNames.Sad)
-})
-radio.onReceivedNumber(function (receivedNumber) {
-    music.setVolume(255)
-    if (receivedNumber == 0) {
-        basic.showIcon(IconNames.Happy)
-        music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
 
-    }
-    if (receivedNumber == 1) {
-        basic.showIcon(IconNames.Sad)
-        music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
-
-    }
-})
-```
 
 ```package
 radio
