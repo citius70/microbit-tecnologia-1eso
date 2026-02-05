@@ -2,7 +2,7 @@
 
 ## Objetivo @showdialog
 
-Bienvenid@s. En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@.
+Bienvenidas y bienvenidos. En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@.
 
 Aprenderás a utilizar los botones A y B, la pantalla LEDs, gestos, enviar el programa al micro:bit...
 
