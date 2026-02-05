@@ -4,7 +4,7 @@
 
 En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@.
 
-Aprenderás a utilizar los botones `A` y B`, la pantalla LEDs, gestos, enviar el programa al micro:bit...
+Aprenderás a utilizar los botones `A` y `B`, la pantalla LEDs, gestos, enviar el programa al micro:bit...
 
 ![Heart shape in the LEDs](/static/mb/projects/flashing-heart/sim.gif)
 
