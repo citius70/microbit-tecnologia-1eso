@@ -2,7 +2,7 @@
 
 ## Objetivo @showdialog
 
-Programa los LEDs en el @boardname@ para conseguir esta animación 💖
+En este programa debes programar los LEDs en el @boardname@ para conseguir esta animación 💖
 
 ![Heart shape in the LEDs](/static/mb/projects/flashing-heart/sim.gif)
 
