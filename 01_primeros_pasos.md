@@ -2,9 +2,9 @@
 
 ## Objetivo @showdialog
 
-Bienvenidas y bienvenidos. En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@.
+En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@.
 
-Aprenderás a utilizar los botones A y B, la pantalla LEDs, gestos, enviar el programa al micro:bit...
+Aprenderás a utilizar los botones `A` y B`, la pantalla LEDs, gestos, enviar el programa al micro:bit...
 
 ![Heart shape in the LEDs](/static/mb/projects/flashing-heart/sim.gif)
 
@@ -15,11 +15,11 @@ Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` dentro de ``||basic:al ini
 Reemplaza el texto **``"Hola"``** con tu **nombre**. ¿Viste cómo se desplaza el texto?
 
 ```sim
-basic.showString("Alberto")
+basic.showString("Asimlberto")
 ```
 
 ```blocks
-basic.showString("Alberto")
+basic.showString("Ablockslberto")
 ```
 
 ## Paso 2: Botón A
