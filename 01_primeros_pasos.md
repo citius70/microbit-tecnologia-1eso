@@ -8,7 +8,7 @@ Aprenderás a utilizar los botones `A` y `B`, la pantalla LEDs, gestos, enviar e
 
 ![Heart shape in the LEDs](/static/mb/projects/flashing-heart/sim.gif)
 
-## Paso 1: Mostrar texto en la pantalla 5x5 LEDs
+## Paso 1: Mostrar texto en la pantalla de LEDS
 
 Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` dentro de ``||basic:al iniciar||``.
 
