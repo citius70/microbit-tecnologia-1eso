@@ -19,7 +19,7 @@ basic.showString("Asimlberto")
 ```
 
 ```blocks
-basic.showString("Ablockslberto")
+basic.showString("Alberto")
 ```
 
 ## Paso 2: Botón A
