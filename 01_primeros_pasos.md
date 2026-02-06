@@ -14,14 +14,16 @@ Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` dentro de ``||basic:al ini
 
 Reemplaza el texto **``"Hola"``** con tu **nombre**. ¿Viste cómo se desplaza el texto?
 
-```sim
-basic.showString("Asimlberto")
-```
+
 
 ```blocks
 basic.showString("Alberto")
 ```
 
+
+```sim
+basic.showString("Asimlberto")
+```
 ## Paso 2: Botón A
 
 El texto dejó de desplazarse. Vamos a intentar que tu nombre aparezca cuando pulsas el **botón A**:
