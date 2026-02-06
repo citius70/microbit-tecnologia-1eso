@@ -21,7 +21,7 @@ basic.showString("Alberto")
 ```
 
 
-## Botón `|A|`
+## Botón |A|
 
 
 El texto dejó de desplazarse. Vamos a intentar que tu nombre aparezca cuando pulsas el **botón `|A|`**:
@@ -34,13 +34,12 @@ input.onButtonPressed(Button.A, () => {
 });
 ```
 
-## Botón `|B|`
+## Botón |B|
 
 * **Objetivo**: Coloca algunos bloques para mostrar un **``smiley``** (CARA SONRIENTE) cuando se pulse el botón **`B`**. 
 
 **Instrucciones**: Arrastra el bloque ``||basic:mostrar LEDs||`` dentro de otro bloque ``||input:al presionar el botón: B||`` (Usa el desplegable para encontrar **`B`**).
-
-    * Dibuja una cara sonriente emn la pantalla de 25 (5x5) LEDs.
+Dibuja una cara sonriente en la pantalla de 25 (5x5) LEDs.
 
 ```blocks
 input.onButtonPressed(Button.B, () => {
