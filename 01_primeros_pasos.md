@@ -24,7 +24,7 @@ basic.showString("Alberto")
 ```sim
 basic.showString("Asimlberto")
 ```
-## Paso 2: Botón A
+## Paso 2: Botón `A`
 
 El texto dejó de desplazarse. Vamos a intentar que tu nombre aparezca cuando pulsas el **botón A**:
 
