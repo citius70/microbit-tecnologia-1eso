@@ -10,7 +10,9 @@ Aprenderás a utilizar los botones `|A|` y `|B|`, la pantalla LEDs, gestos, envi
 
 ## Mostrar texto en la pantalla de LEDS
 
-Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` (debajo de la **caja de herramientas**) dentro de ``||basic:al iniciar||``.
+* **Objetivo**: Vamos a convertir a @boardname @ en tu tarjeta de identificación.
+
+**Instrucciones**: Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` (debajo de la **caja de herramientas**) dentro de ``||basic:al iniciar||``.
 
 Reemplaza el texto **``"Hola"``** con tu **nombre**. ¿Viste cómo se desplaza el texto?
 
