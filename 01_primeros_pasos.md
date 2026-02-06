@@ -4,31 +4,27 @@
 
 En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@.
 
-Aprenderás a utilizar los botones `A` y `B`, la pantalla LEDs, gestos, enviar el programa al micro:bit...
+Aprenderás a utilizar los botones `|A|` y `|B|`, la pantalla LEDs, gestos, enviar el programa al micro:bit...
 
 ![Heart shape in the LEDs](/static/mb/projects/flashing-heart/sim.gif)
 
-## Paso 1: Mostrar texto en la pantalla de LEDS
+## Mostrar texto en la pantalla de LEDS
 
-Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` dentro de ``||basic:al iniciar||``.
+Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` (debajo de la **caja de herramientas**) dentro de ``||basic:al iniciar||``.
 
 Reemplaza el texto **``"Hola"``** con tu **nombre**. ¿Viste cómo se desplaza el texto?
-
-
 
 ```blocks
 basic.showString("Alberto")
 ```
 
 
-```sim
-basic.showString("Asimlberto")
-```
-## Paso 2: Botón `A`
+## Botón `|A|`
 
-El texto dejó de desplazarse. Vamos a intentar que tu nombre aparezca cuando pulsas el **botón A**:
 
-* Arrastra el bloque ``||input:al presionar el botón: A||`` y coloca ``||basic:mostrar cadena:("TU_NOMBRE")||`` en su ranura. Ahora pulsa el botón **`A`** y mira como se desplaza el texto.
+El texto dejó de desplazarse. Vamos a intentar que tu nombre aparezca cuando pulsas el **botón `|A|`**:
+
+Arrastra el bloque ``||input:al presionar el botón: A||`` y coloca ``||basic:mostrar cadena:("TU_NOMBRE")||`` en su ranura. Ahora pulsa el botón **`A`** y mira como se desplaza el texto.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
@@ -36,11 +32,11 @@ input.onButtonPressed(Button.A, () => {
 });
 ```
 
-## Paso 3: Botón B
+## Botón `|B|`
 
-Coloca algunos bloques para mostrar un **``smiley``** cuando se pulse el botón **`B`**. 
+* **Objetivo**: Coloca algunos bloques para mostrar un **``smiley``** (CARA SONRIENTE) cuando se pulse el botón **`B`**. 
 
-* Para ello, arrastra el bloque ``||basic:mostrar LEDs||`` dentro de otro bloque ``||input:al presionar el botón: B||`` (Usa el desplegable para encontrar **`B`**).
+**Instrucciones**: Arrastra el bloque ``||basic:mostrar LEDs||`` dentro de otro bloque ``||input:al presionar el botón: B||`` (Usa el desplegable para encontrar **`B`**).
 
     * Dibuja una cara sonriente emn la pantalla de 25 (5x5) LEDs.
 
@@ -56,11 +52,12 @@ input.onButtonPressed(Button.B, () => {
 })
 ```
 
-## Paso 4: Gestos (agitar)
+## Gestos (agitar)
 
-Ahora, haz que se muestre un **número al azar** al *agitar* 🪇  el @boardname@.
+* **Objetivo**: Ahora, haz que se muestre un **número al azar** al *agitar* 🪇  el @boardname@.
 
-* Coloca los bloques ``||basic:mostrar número|||`` y ``||math:escoger al azar||`` en un bloque ``||input:si agitado||`` para construir un dado.
+**Instrucciones**: Coloca los bloques ``||basic:mostrar número|||`` y ``||math:escoger al azar||`` en un bloque ``||input:si agitado||`` para construir un dado.
+Agita la tarjeta una vez para que se muestre un número al azar. Repítelo varias veces.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -68,9 +65,11 @@ input.onGesture(Gesture.Shake, () => {
 })
 ```
 
-## Paso 5: Programar un dado electrónico
+## Programar un dado electrónico
 
-Un dado típico 🎲 muestra valores de `1` a `6`. Así que, en  ``||math:escoger al azar de (1) a (6)||``, ¡no olvides elegir bien los valores mínimo 1 y máximo 6!
+* **Objetivo**: Convierte @boardname@ en un dado típico 🎲 que muestre valores de `1` a `6`.
+
+**Instrucciones**: En  ``||math:escoger al azar de (1) a (6)||``, ¡no olvides elegir bien los valores mínimo 1 y máximo 6!
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -78,7 +77,7 @@ input.onGesture(Gesture.Shake, () => {
 })
 ```
 
-## Paso 6: Enviar el programa a micro:bit
+## Enviar el programa a micro:bit
 
 Ahora vamos a **transferir el programa** a la tarjeta controladora @boardname@.
 
@@ -89,4 +88,4 @@ En el @boardname@, pulse el botón **`A`** para desplazar el texto. Pulse el bot
 
 ## Final
 
-¡Bien hecho! Ha completado su primera actividad Microsoft MakeCode.😛
+¡Bien hecho! Has completado tu primera actividad. 😛
