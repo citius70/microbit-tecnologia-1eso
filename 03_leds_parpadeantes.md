@@ -62,25 +62,10 @@ basic.forever(() => {
 ```
 
 
-
-## Paso 4
-
-Para solucionarlo, vamos a utilizar el bucle `por siempre` y mover el código dentro de él para que se repita una y otra vez. Puedes eliminar el bloque `plot` ya que no es necesario ahora.
-
-```blocks
-basic.forever(() => {
-    led.plot(0, 0)
-    basic.pause(1000)
-    led.unplot(0, 0)
-    basic.pause(1000)
-})
-```
-
-## ~avatar boothing
+## ~avatar @unplugged
 
 Muy bien, estás preparado para continuar con algún desafío.
 
-## ~
 
 ## Desafío 1
 
