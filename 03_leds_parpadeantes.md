@@ -14,38 +14,54 @@ basic.forever(() => {
 ```
 Constuyamos un LED parpadeante!
 
-## Paso 1
+## Encender un LED
 
-El concepto es muy simple: enciende el LED, espera un rato, apaga el LED, espera de nuevo y se repite de nuevo.
+El concepto es muy simple:
+1. **Enciende** el LED, **espera** un rato.
+2. **Apaga** el LED, **espera** de nuevo
+3. Repite de nuevo, una y otra vez.
 
-Comencemos añadiendo una línea de código que enciende el LED en la posición (0, 0) ``||led.graficar x=0, y=0||``.
+Comencemos 🚀🚀🚀 añadiendo una línea de código que *enciende el LED en la posición (0, 0)*.
+* Para ello, utiliza ``||led.graficar x=0, y=0||`` y colócalo dentro de ``||basic.para siempre||``.
 
 ```blocks
-led.plot(0, 0)
+basic.forever(() => {
+    led.plot(0, 0)
+})
 ```
 
 Prueba el programa en el simulador para asegurarte de su funcionamiento.
 
-## Paso 2
-Ahora, añadamos código para `pausar` 1 segundo (1000 milisegundos) y apagar el LED. ``||basic.pausa ms(1000)||``.
+## Esperar, apagar el LED y volver a encender
+
+Código para **apagar**:
+1. Añade código para **pausar 1 segundo** (1000 milisegundos) : ``||basic.pausa ms(1000)||``.
+2. **Apaga** el LED:  ``||led.ocultar x=0, y=0||``
+
+Código para **volver a encender**:
+1. Añade código para **pausar 1 segundo** (1000 milisegundos) : ``||basic.pausa ms(1000)||``.
+2. Como el código se vuelve a repetir en este punto, el LED se volverá a encender.
+
+```sim
+basic.forever(() => {
+    led.plot(0, 0)
+    basic.pause(1000)
+    led.unplot(0, 0)
+    basic.pause(1000)
+    
+})
+```
 
 ```blocks
-led.plot(0, 0)
-basic.pause(1000)
-led.unplot(0,0)
-```
-## Paso 3
-Hemos encendido y apagado el LED una sola vez. Añadamos otra pausa y encendamos el LED otra vez.
-
-```blocks
-led.plot(0, 0)
-basic.pause(1000)
-led.unplot(0, 0)
-basic.pause(1000)
-led.plot(0, 0)
+    basic.forever(() => {
+    led.plot(0, 0)
+    basic.pause(1000)
+    led.unplot(0,0)
+    basic.pause(1000)
+})
 ```
 
-¡Atención!. El actual código funciona, pero hace que el LED parpadea una sola vez.
+
 
 ## Paso 4
 
