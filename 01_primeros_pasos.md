@@ -12,9 +12,9 @@ Aprenderás a utilizar los botones `|A|` y `|B|`, la pantalla LEDs, gestos, envi
 
 * **Objetivo**: Vamos a convertir a @boardname @ en tu tarjeta de identificación.
 
-**Instrucciones**: Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` (debajo de la **caja de herramientas**) dentro de ``||basic:al iniciar||``.
-
-Reemplaza el texto **``"Hola"``** con tu **nombre**. ¿Viste cómo se desplaza el texto?
+**Instrucciones**: 
+1.Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` (debajo de la **caja de herramientas**) dentro de ``||basic:al iniciar||``.
+2. Reemplaza el texto **``"Hola"``** con tu **nombre**. El texto se desplazará una sola vez.
 
 ```blocks
 basic.showString("Alberto")
@@ -23,10 +23,9 @@ basic.showString("Alberto")
 
 ## Botón |A|
 
+* **Objetivo**: Vamos a intentar que tu nombre aparezca cuando pulsas el **botón `|A|`**:
 
-El texto dejó de desplazarse. Vamos a intentar que tu nombre aparezca cuando pulsas el **botón `|A|`**:
-
-Arrastra el bloque ``||input:al presionar el botón: A||`` y coloca ``||basic:mostrar cadena:("TU_NOMBRE")||`` en su ranura. Ahora pulsa el botón **`A`** y mira como se desplaza el texto.
+**Instrucciones**: Arrastra el bloque ``||input:al presionar el botón: A||`` y coloca ``||basic:mostrar cadena:("TU_NOMBRE")||`` en su ranura. Ahora pulsa el botón **`A`** y mira como se desplaza el texto.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
