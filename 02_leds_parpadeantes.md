@@ -1,11 +1,10 @@
 # LEDs parpadeantes
 
-## Objetivo @showdialog
+## Objetivo @unplugged
 
-Vamos a encender y apagar LEDs utilizando sus coordenadas.
+Enciende y apaga un LED constantemente
 
-
-```blocks
+```sim
 basic.forever(() => {
     led.plot(0, 0)
     basic.pause(1000)
@@ -13,95 +12,95 @@ basic.forever(() => {
     basic.pause(1000)
 })
 ```
-¡Vamos 🚀!
+Constuyamos un LED parpadeante!
 
-## Paso 1
+## Encender un LED
 
-El concepto es muy simple: enciende el LED, espera un rato, apaga el LED, espera de nuevo y se repite de nuevo.
+El concepto es muy simple:
+1. **Enciende** el LED, **espera** un rato.
+2. **Apaga** el LED, **espera** de nuevo
+3. Repite de nuevo, una y otra vez.
 
-Comencemos añadiendo una línea de código que enciende el LED en la coordenada (0, 0) ``||led.graficar x=0, y=0||``. Colócalo dentro de `` ||basic:para siempre||`` 
-
-![Coordenadas LEDs](/static/microbit-led-coords.png)
+Comencemos 🚀🚀🚀 añadiendo una línea de código que *enciende el LED en la posición (0, 0)*.
+* Para ello, utiliza ``||led.graficar x=0, y=0||`` y colócalo dentro de ``||basic.para siempre||``.
 
 ```blocks
-basic.forever(()=> {
-    led.plot(0,0)
-}
+basic.forever(() => {
+    led.plot(0, 0)
+})
 ```
 
 Prueba el programa en el simulador para asegurarte de su funcionamiento.
 
-## Paso 2
+## Esperar, apagar el LED y volver a encender
 
-Ahora, añadamos código para mantener el LED encendido durante 1 segundo (1000 milisegundos) ``||basic:pausa ms (1000)||`` y apagar el LED ``||led.ocultar x=0, y=0||``.
+Código para **apagar**:
+1. Añade código para **pausar 1 segundo** (1000 milisegundos) : ``||basic.pausa ms(1000)||``.
+2. **Apaga** el LED:  ``||led.ocultar x=0, y=0||``
 
+Código para **volver a encender**:
+1. Añade código para **pausar 1 segundo** (1000 milisegundos) : ``||basic.pausa ms(1000)||``.
+2. Como el código se vuelve a repetir en este punto, el LED se volverá a encender.
 
-```blocks
-basic.forever(() => {
-    led.plot(0, 0)
-    basic.pause(1000)
-    led.unplot(0,0)
-})
-```
-
-## Paso 3
-
-Como ves, el funcionamiento no es correcto. Para solucionarlo añadamos otra pausa ``||basic:pausa ms (1000)||`` después de ``||led.ocultar x=0, y=0||``.
-
-```blocks
+```sim
 basic.forever(() => {
     led.plot(0, 0)
     basic.pause(1000)
     led.unplot(0, 0)
     basic.pause(1000)
+    
 })
 ```
-Muy bien, estás preparado para continuar mejorando el programa.
+
+```blocks
+    basic.forever(() => {
+    led.plot(0, 0)
+    basic.pause(1000)
+    led.unplot(0,0)
+    basic.pause(1000)
+})
+```
 
 
-## Paso 4
+## ~avatar @unplugged
 
-Mostremos una "cara sonriente". Comenzaremos con los ojos en este paso.
+Muy bien, estás preparado para continuar con algún desafío.
 
-Añade ``||led.graficar(1,1)||`` y ``||led.graficar(2,2)||`` y debajo ``||led.graficar(3,1)||`` antes de la pausa. Después añade ``||led.ocultar(1,1)||``, ``||led.ocultar(2,2)||`` y ``||plot.ocultar(3,1)||`` después ``||led.pausa ms (1000)||``.
+
+## Desafío 1
+
+**Objetivo**: Mostremos una "cara sonriente". Comenzaremos con los ojos en este desafío y lo completaremos en el Desafío 2.
+
+**Instrucciones**:  
+1. Añade ``||led.graficar(1,1)||``, ``||led.graficar(3,1)||`` y  ``||led.graficar(2,2)||``.
+2. Añade ``||led.pausa ms (1000)||``.
+3. Después añade ``||led.ocultar(1,1)||``, ``||led.ocultar(3,1)||`` y ``||led.ocultar(2,2)||``.
+4. Por último, ``||led.pausa ms (1000)||``.
 
 Cuando esté preparado, no olvides probar el código.
 
-```sim
+```blocks
 basic.forever(() => {
-    led.plot(1, 1)
     led.plot(2, 2)
+    led.plot(1, 1)
     led.plot(3, 1)
     basic.pause(1000)
-    led.unplot(1, 1)
     led.unplot(2, 2)
+    led.unplot(1, 1)
     led.unplot(3, 1)
     basic.pause(1000)
 })
 ```
+
+## Desafío 2
+
+Completa el código similar al paso anterior para conseguir una "cara sonriente".
 
 ```blocks
 basic.forever(() => {
     led.plot(1, 1)
-    led.plot(2, 2)
     led.plot(3, 1)
-    basic.pause(1000)
-    led.unplot(1, 1)
-    led.unplot(2, 2)
-    led.unplot(3, 1)
-    basic.pause(1000)
-})
-```
-
-## Paso 5
-
-Completa el código para conseguir una "cara sonriente".
-
-```sim
-basic.forever(() => {
-    led.plot(1, 1)
     led.plot(2, 2)
-    led.plot(3, 1)
     led.plot(0, 3)
     led.plot(4, 3)
     led.plot(1, 4)
@@ -109,31 +108,8 @@ basic.forever(() => {
     led.plot(3, 4)
     basic.pause(1000)
     led.unplot(1, 1)
-    led.unplot(2, 2)
     led.unplot(3, 1)
-    led.unplot(0, 3)
-    led.unplot(4, 3)
-    led.unplot(1, 4)
-    led.unplot(2, 4)
-    led.unplot(3, 4)
-    basic.pause(1000)
-})
-```
-
-```blocks
-basic.forever(() => {
-    led.plot(1, 1)
-    led.plot(2, 2)
-    led.plot(3, 1)
-    led.plot(0, 3)
-    led.plot(4, 3)
-    led.plot(1, 4)
-    led.plot(2, 4)
-    led.plot(3, 4)
-    basic.pause(1000)
-    led.unplot(1, 1)
     led.unplot(2, 2)
-    led.unplot(3, 1)
     led.unplot(0, 3)
     led.unplot(4, 3)
     led.unplot(1, 4)
