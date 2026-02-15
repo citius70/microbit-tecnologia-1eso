@@ -2,30 +2,33 @@
 
 ## Objetivo @showdialog
 
-¡Bienvenido! Esta actividad te enseñará cómo medir la temperatura en el @boardname@. ¡Empecemos! 🌡️
+¡Bienvenido! Esta actividad te enseñará cómo **medir la temperatura** en el @boardname@. ¡Empecemos! 🌡️
 
 ![Outdoor thermometer](/static/courses/ucp-science/temperature/heat-of-day.jpg)
 
 
-## Paso 1
+## Medición de la temperatura al agitar
 
-Queremos mostrar la temperatura al agitar. Para hacer esto, necesitamos añadir el evento ``||input:si agitado||`` que se ejecutará cada vez que el usuario agite el @boardname@.
+**Objetivo**: Mostrar la temperatura al agitar. 
+**Instrucciones**:
+1. Añadir el evento ``||input:si agitado||`` que se ejecutará cada vez que el usuario agite el @boardname@.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     })
 ```
-## Paso 2
+## Crear una variable
 
-Debido a que la temperatura va a cambiar de manera frecuente hay que ir guardando su valor en una ``variable``.
+**Objetivo**: Debido a que el valor la temperatura va a **cambiar** de manera frecuente hay que ir guardando su valor en una **``variable``**.
+**Instrucciones**:
+1. En la categoría ``||Variables: Variables||``  haz click en ``||crea una variable||`` y ponle el nombre de ``temp``.
 
-* En la categoría ``||Variables: Variables||``  haz click en ``||crea una variable||`` y ponle el nombre de ``temp``.
 
 
+## Almacenar el valor de la temperatura en la variable
 
-## Paso 3
-
-Ahora hagamos que el valor de la temperatura medido por el sensor de @boardname@ se almacene (se fije) en la variable ``temp``  ``||variables: fijar [temp] a (temperatura ºC)||``
+**Objetivo**: Ahora hagamos que el valor de la temperatura medido por el sensor de @boardname@ se **almacene (se fije) en la variable** ``temp``  
+**Instrucciones**: Intenta completar este bloque ``||variables: fijar [temp] a (temperatura ºC)||``
 
     * La temperatura se mide en **Celsius**, por lo que un valor de `29` equivale a 29 grados Celsius.
 
@@ -34,9 +37,11 @@ input.onGesture(Gesture.Shake, () => {
     let temp = input.temperature()
 })
 ```
-## Paso 4
+## Mostrar la temperatura
 
-Hagamos que el valor de la variable ``temp`` se muestre en pantalla utilizando ``||basic: mostrar número (temp)||``.
+**Objetivo**: Hagamos que el valor de la variable ``temp`` se muestre en pantalla.
+**Instrucciones**: Intenta completar este bloque ``||basic: mostrar número (temp)||``.
+**Prueba**: Haz clic en el botón ``SHAKE`` para ver si el código funciona como se espera.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -45,9 +50,7 @@ input.onGesture(Gesture.Shake, () => {
 })
 ```
 
-* Haz clic en el botón ``SHAKE`` para ver si el código funciona como se espera.
-
-## Paso 5
+## Completar el texto
 
 Agreguemos el código ``||basic: mostrar cadena||``  para mostrar el texto **`Temperatura =  `**  con un bloque `mostrar cadena`. Modifique el bloque `mostrar cadena` para mostrar el texto lentamente en un intervalo de `300` milisegundos.
 
@@ -61,6 +64,6 @@ input.onGesture(Gesture.Shake, () => {
 
 * Ejecuta el código para ver si funciona como se espera.
 
-## Paso 5
+## Transferir el programa
 
 Transfiere el código al @boardname@ y comprueba el funcionamiento.
