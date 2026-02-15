@@ -2,7 +2,7 @@
 
 ## Objetivo @showdialog
 
-Programa los botones del @boardname@ para que muestren una **cara feliz** 😀 o **triste** 🙁
+Programa los botones ``|A|`` y ``|B|`` del @boardname@ para que muestren una **cara feliz** 😀 o **triste** 🙁
 
 ![Presionando los botones A y B](/static/mb/projects/smiley-buttons/sim.gif)
 
@@ -11,11 +11,11 @@ Programa los botones del @boardname@ para que muestren una **cara feliz** 😀 o
 **Objetivo**: Mostremos una **cara feliz** 😀 cuando presionemos el **botón** ``|A|``.
 
 **Instrucciones**:
-1. Haz clic en la categoría ``||basic:Básico||`` en la **caja de herramientas**.
+1. Haz clic en la categoría ``||input:Entrada||`` en la **caja de herramientas**.
    * Arrastra  el bloque ``||input:al presionar el botón A||`` y, a continuación, el bloque ``||basic:mostrar icono|`` dentro de aquel.
-2. En el bloque ``||basic:mostrar icono||``, haz clic en el ícono de la **cara alegre** para abrir el menú. Seleccione un icono de **cara feliz**.
+2. Haz clic en ``||basic:mostrar icono||`` y selecciona la **cara alegre** .
 
-Hagamos que +**suene una melodía** también:
+Hagamos que **suene una melodía** también:
 1. Arrastra el bloque  ``||music:reproduce secuencia (feliz) en modo [hasta que termine]||``  
 
 **Prueba**:
@@ -28,19 +28,20 @@ input.onButtonPressed(Button.A, function() {
 })
 ```
 
-## Paso 2: Botón B = Cara triste
+## Botón B = Cara triste
 
-Ahora mostremos una cara triste 🙁 cuando presionemos el botón ``|B|``.
+**Instrucciones**:
+1. Haz clic en la categoría ``||input:Entrada||`` en la **caja de herramientas**.
+   * Arrastra  el bloque ``||input:al presionar el botón B||`` y, a continuación, el bloque ``||basic:mostrar icono|`` dentro de aquel.
+2. Haz clic en ``||basic:mostrar icono||`` y selecciona la **cara triste** .
 
-* Haz clic en la categoría ``||input:Entrada||`` en la Caja de herramientas.
+Hagamos que **suene una melodía** también:
+1. Arrastra el bloque  ``||music:reproduce secuencia (triste) en modo [hasta que termine]||``  
 
-    * Arrastra otro bloque ``||input:al presionar el botón A||`` al espacio de trabajo de codificación (puede colocarlo en cualquier lugar).
+  **Prueba**:
+En el simulador @boardname@ en la pantalla, presiona el botón ``|A|`` y ``|B|`` . ¿Ves una cara feliz? ¿Ves una cara triste? ⭐¡Buen trabajo! ⭐
 
-    * Haz clic en el menú desplegable del botón ``|A|`` y selecciona ``|B|``.
-
-* Hagamos que suene una melodía también.
-    
-    * Arrastra el bloque  ``||music:reproduce secuencia (triste) en modo [hasta que termine]||``  
+`  
 
 
 ```blocks
@@ -50,16 +51,15 @@ input.onButtonPressed(Button.B, function() {
 })
 ```
 
-Presiona el botón ``|B|`` en el simulador @boardname@ en la pantalla,. ¿Ves una cara triste? ⭐¡Bien! ⭐
 
-## Paso 3: Botón A + B
+## Desafío: Botón A + B
 
-Vamos más allá: ¡intenta agregar un emoji secreto que aparece cuando se presionan los botones ``|A|`` y ``|B|`` juntos!
+Vamos más allá: ¡intenta agregar un emoji secreto que aparece cuando se **presionan a la vez los botones** ``|A|`` y ``|B|``!
 
-## Paso 4: Envía el programa al micro:bit
+## Envía el programa al micro:bit
 
-Conecta el @boardname@ al ordenador y haz clic en el botón ``|Descargar|``.
+1. Conecta el @boardname@ al ordenador y haz clic en el botón ``|Descargar|``.
 
-Sigue las instrucciones para transferir tu código a @boardname@.
+2. Sigue las instrucciones para transferir tu código a @boardname@.
 
-Presiona los botones ``|A|`` y ``|B|`` en el micro:bit para ver tus emojis felices 😀 y tristes 🙁.
+3. Presiona los botones ``|A|`` y ``|B|`` en el micro:bit para ver tus emojis felices 😀 y tristes 🙁.
