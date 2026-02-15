@@ -2,22 +2,23 @@
 
 ## Objetivo @showdialog
 
-Programa los botones del @boardname@ para que muestren una cara feliz 😀 o triste 🙁
+Programa los botones del @boardname@ para que muestren una **cara feliz** 😀 o **triste** 🙁
 
 ![Presionando los botones A y B](/static/mb/projects/smiley-buttons/sim.gif)
 
-## Paso 1: Botón A = Cara alegre
+## Botón A = Cara alegre
 
-Mostremos una cara feliz 😀 cuando presionemos el botón ``|A|``.
+**Objetivo**: Mostremos una **cara feliz** 😀 cuando presionemos el **botón** ``|A|``.
 
-* Haga clic en la categoría ``||basic:Básico||`` en la Caja de herramientas. Arrastre el bloque ``||basic:mostrar icono|`` al bloque ``||input:al presionar el botón A||``.
+**Instrucciones**:
+1. Haz clic en la categoría ``||basic:Básico||`` en la **caja de herramientas**.
+   * Arrastra  el bloque ``||input:al presionar el botón A||`` y, a continuación, el bloque ``||basic:mostrar icono|`` dentro de aquel.
+2. En el bloque ``||basic:mostrar icono||``, haz clic en el ícono de la **cara alegre** para abrir el menú. Seleccione un icono de **cara feliz**.
 
-    * En el bloque ``||basic:mostrar icono||``, haz clic en el ícono de la **cara alegre** para abrir el menú. Seleccione un icono de cara feliz.
+Hagamos que +**suene una melodía** también:
+1. Arrastra el bloque  ``||music:reproduce secuencia (feliz) en modo [hasta que termine]||``  
 
-* Hagamos que suene una melodía también.
-    
-    * Arrastra el bloque  ``||music:reproduce secuencia (feliz) en modo [hasta que termine]||``  
-
+**Prueba**:
 En el simulador @boardname@ en la pantalla, presiona el botón ``|A|``. ¿Ves una cara feliz? ⭐¡Buen trabajo! ⭐
 
 ```blocks
