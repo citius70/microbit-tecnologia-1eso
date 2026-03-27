@@ -35,12 +35,12 @@ Vamos a programar el botón para que avise cuando el mensaje ha salido.
 
 1.  Saca el bloque `||input:al presionar el botón A||`.
 2.  Busca en Radio: `||radio:radio enviar cadena " "||`.
-3.  Escribe dentro de las comillas la palabra clave: **AMOR**.
+3.  Escribe dentro de las comillas la palabra clave: **mensaje**.
 4.  Para confirmar que ha funcionado, añade: `||basic:mostrar cadena "ENVIADO"||`.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    radio.sendString("AMOR")
+    radio.sendString("mensaje")
     basic.showString("ENVIADO")
 })
 ```
@@ -69,12 +69,3 @@ radio.onReceivedString(function (receivedString) {
 3.  **Receptor:** ¡Mira tu pantalla! Un corazón debería haber aparecido mágicamente con música.
 
 ---
-
-## 🚀 Súper Desafío (Modo Pro)
-¿Quieres mejorar tu sistema de mensajería?
-* Haz que el receptor tenga que **pulsar el botón B** para borrar el corazón y dejar la pantalla lista para el siguiente mensaje.
-* ¿Podrías cambiar el icono del corazón por una cara sonriente 😊?
-
----
-
-**¿Te gustaría que probemos ahora con un tutorial sobre cómo usar el sensor de temperatura para hacer una alarma de incendios?**
