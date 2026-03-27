@@ -13,7 +13,7 @@ Cuando pulses:
 
 ![@boardname@ enviando estados de ánimo](/static/mb/projects/mood-radio.png)
 
-## Paso 1: Programando el botón A del emisor 
+## Programando el botón A del emisor 
 
 Para poder comunicarse, los @boardname@ tienen que estar en el mismo **grupo**. Por ello, ``||basic: al iniciar||`` establece ``||radio: radio establecer grupo [17]||``. (Puedes elegir otro número de grupo)
 
@@ -29,7 +29,7 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-## Paso 2: Programando el botón B del emisor 
+## Programando el botón B del emisor 
 
 Ahora vamos a programar el botón ``||B||`` para que emita un mensaje con el texto **mensaje_2** y se confirme con el texto **m2**. 
 
