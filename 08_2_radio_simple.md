@@ -67,5 +67,3 @@ radio.onReceivedString(function (receivedString) {
 1.  Conectad las Micro:bit y pulsad el botón **Descargar**.
 2.  **Emisor:** Pulsa el botón A. Verás el texto "ENVIADO" recorriendo tu pantalla.
 3.  **Receptor:** ¡Mira tu pantalla! Un corazón debería haber aparecido mágicamente con música.
-
----
