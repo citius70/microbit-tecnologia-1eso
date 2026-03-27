@@ -1,5 +1,7 @@
 # 💌 Mensajería Mágica: Love is in the air!
 
+## Objetivo @showdialog
+
 ### 🌟 El Reto de hoy
 ¿Te imaginas enviar un dibujo por el aire sin usar cables? Hoy vamos a programar tu Micro:bit para que actúe como una antena de mensajes. Cuando pulses un botón, tu placa dirá **"ENVIADO"** y, en la placa de tu compañero/a, ¡aparecerá un corazón!
 
