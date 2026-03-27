@@ -41,7 +41,7 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 
-## Paso 3: Configurando el grupo del receptor
+## Configurando el grupo del receptor
 
 Ahora vamos a programar el @boardname@ de tu compañero o compañera. **Esto lo hará en su ordenador y en su @boardname@**.
 
@@ -55,7 +55,7 @@ radio.setGroup(17)
 
 ```
 
-## Paso 4: Recibiendo el mensaje_1
+## Recibiendo el mensaje_1
 
 Vamos a seguir programando el receptor para que reciban los dos mensajes (mensaje_1 y mensaje_2) enviados por el emisor.
 
@@ -78,7 +78,7 @@ radio.onReceivedString(function (receivedString) {
 })
 ```
 
-## Paso 5: Recibiendo el mensaje_2
+## Recibiendo el mensaje_2
 
 ¿Qué ocurre si pulsamos el botón **B** en el emisor? Pues que en el @boardname@ receptor se debe mostrar el icono de una jirafa 🦒 y suene la melodía Animador.
 
