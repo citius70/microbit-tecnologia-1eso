@@ -2,8 +2,9 @@
 
 
 ## Objetivo @showdialog
+
 ### 🌟 El Reto de hoy
-¿Sabías que la pantalla de tu Micro:bit también es un "ojo"? Sus LEDs pueden sentir cuánta luz hay en la habitación. Hoy vamos a programar un dispositivo que:
+¿Sabías Micro:bit puede sentir cuánta luz hay en la habitación. Hoy vamos a programar un dispositivo que:
 1.  Muestre una **gráfica de energía** en tiempo real.
 2.  Te diga el **número exacto** de luz si pulsas un botón.
 3.  ¡Active una **alarma sonora** cuando alguien apague las luces!
@@ -94,7 +95,3 @@ basic.forever(function () {
 ## 🏆 Súper Desafío (Modo Pro)
 * **Ajuste de sensibilidad:** ¿Crees que 50 es demasiado poco? Intenta cambiar ese número para que la alarma suene incluso cuando hay algo de luz.
 * **Aviso visual:** Haz que, además de sonar, aparezca una **calavera 💀** en los LEDs cuando la luz baje de 50.
-
----
-
-**¿Te gustaría que el siguiente tutorial fuera sobre cómo crear un "Contador de Pasos" para medir cuánto caminas en el recreo?**
