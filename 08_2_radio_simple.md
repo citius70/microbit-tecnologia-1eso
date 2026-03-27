@@ -16,7 +16,7 @@
 
 ### 🧠 Diccionario Ninja
 * **Radio:** La forma en la que las Micro:bit se hablan sin tocarse.
-* **Cadena (String):** Es una palabra o frase secreta que viaja por el aire. Nuestra palabra clave será "AMOR".
+* **Cadena (String):** Es una palabra o frase secreta que viaja por el aire. Nuestra palabra clave será "mensaje".
 
 ---
 
