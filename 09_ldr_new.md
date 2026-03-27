@@ -1,5 +1,7 @@
 # 🔦 ¡Detector de Oscuridad! Alarma y Medidor de Luz
 
+
+## Objetivo @showdialog
 ### 🌟 El Reto de hoy
 ¿Sabías que la pantalla de tu Micro:bit también es un "ojo"? Sus LEDs pueden sentir cuánta luz hay en la habitación. Hoy vamos a programar un dispositivo que:
 1.  Muestre una **gráfica de energía** en tiempo real.
