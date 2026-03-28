@@ -8,7 +8,7 @@
 ---
 
 ### 🎒 Tu Kit de Inventor
-* **1 Micro:bit** (v2 con altavoz integrado preferiblemente).
+* **1 Micro:bit**
 * **Tus reflejos:** ¡Tendrás que mover la placa con precisión!
 
 ### 🧠 Diccionario Ninja
