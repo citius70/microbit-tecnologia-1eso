@@ -1,17 +1,17 @@
 # 🎵 ¡El Instrumento Musical Galáctico! (Sintetizador de Movimiento)
 
-# Objetivo @unplugged
+## Objetivo @unplugged
 
-## 🌟 El Reto de hoy
+### 🌟 El Reto de hoy
 ¿Alguna vez has querido crear música moviendo las manos en el aire como un mago? Hoy vamos a convertir tu Micro:bit en un **Sintetizador Espacial**. El sonido cambiará de tono y forma dependiendo de cómo inclines la placa. ¡Prepárate para crear sonidos de películas de alienígenas!
 
 ---
 
-## 🎒 Tu Kit de Inventor
+### 🎒 Tu Kit de Inventor
 * **1 Micro:bit** (v2 con altavoz integrado preferiblemente).
 * **Tus reflejos:** ¡Tendrás que mover la placa con precisión!
 
-## 🧠 Diccionario Ninja
+### 🧠 Diccionario Ninja
 * **Acelerómetro:** El sensor que detecta si inclinas la placa a la izquierda (**Eje X**) o hacia adelante (**Eje Y**).
 * **Frecuencia:** Es lo que hace que un sonido sea muy grave (como un trueno) o muy agudo (como un pajarito).
 * **Sintetizador:** Una máquina que crea sonidos desde cero usando matemáticas.
