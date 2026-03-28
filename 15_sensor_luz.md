@@ -36,7 +36,7 @@ Ahora vamos a darle "cerebro" a la placa para que decida qué hacer.
 ¿Qué queremos que pase cuando esté oscuro (menos de 100)?
 
 1.  Dentro de la primera parte del "si", añade el bloque de sonido: `||music:reproducir sonido (el que más te guste)||`.
-2.  Justo debajo, añade `||basic:mostrar LEDs||` y dibuja un cuadrado o un rombo para que sirva de lámpara.
+2.  Justo debajo, añade `||basic:mostrar LEDs||` y dibuja un cuadrado relleno o un rombo para que sirva de lámpara.
 
 ## 4. Apagar cuando salga el sol ☀️
 Si hay luz (más de 100), no queremos gastar batería.
@@ -49,9 +49,9 @@ basic.forever(function () {
         music.play(music.createSoundExpression(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
         basic.showLeds(`
             . # # # .
-            # . . . #
-            # . . . #
-            # . . . #
+            # # # # #
+            # # # # #
+            # # # # #
             . # # # .
             `)
     } else {
