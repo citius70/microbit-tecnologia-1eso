@@ -1,8 +1,3 @@
-Entendido. Aquí tienes el código completo en formato **Markdown (.md)**, optimizado específicamente para que el motor de tutoriales de MakeCode lo interprete correctamente. 
-
-Copia este bloque de texto íntegro y pégalo en tu archivo `02_corazon_palpitante.md` en GitHub:
-
-```markdown
 # 💖 ¡Haz que tu Micro:bit tenga sentimientos! El Corazón Palpitante
 
 ## El Reto de hoy @unplugged
@@ -91,8 +86,3 @@ basic.forever(function() {
 
 ---
 
-### Recordatorio importante:
-Para que este archivo cargue, el enlace correcto es:
-`https://makecode.microbit.org/#tutorial:github:citius70/microbit-tecnologia-1eso/02_corazon_palpitante`
-
-**¿Te gustaría que redacte también el contenido del archivo `pxt.json` para asegurar que MakeCode reconozca este archivo como un tutorial?**
