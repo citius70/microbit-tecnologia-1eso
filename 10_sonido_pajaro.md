@@ -18,7 +18,7 @@
 
 ---
 
-# 1. Preparando la "Voz" de la Micro:bit 🗣️
+## 1. Preparando la "Voz" de la Micro:bit 🗣️
 En lugar de usar melodías grabadas, vamos a fabricar un sonido único que cambie constantemente.
 
 1.  Busca el bloque `||basic:para siempre||`.
@@ -27,7 +27,7 @@ En lugar de usar melodías grabadas, vamos a fabricar un sonido único que cambi
 
 ---
 
-# 2. Conectando los sensores al sonido 🎢
+## 2. Conectando los sensores al sonido 🎢
 Aquí viene la magia. Vamos a decirle a la Micro:bit que use su movimiento para decidir qué nota tocar.
 
 1.  En el hueco de **Frecuencia Inicial**, pon: `||input:aceleración (mg) X||` multiplicado por **50**. (Esto hace que al inclinar a los lados el sonido cambie).
@@ -51,7 +51,7 @@ basic.forever(function () {
 
 ---
 
-# 3. ¡Conviértete en DJ Espacial! 🎧
+## 3. ¡Conviértete en DJ Espacial! 🎧
 1.  **Descarga** el código en tu Micro:bit.
 2.  Sostén la placa plana en tu mano. Escucharás un sonido constante.
 3.  **Inclínala lentamente a la izquierda:** El sonido se volverá más grave o agudo.
@@ -61,5 +61,5 @@ basic.forever(function () {
 
 ---
 
-# 🚀 Súper Desafío (Modo Pro)
+## 🚀 Súper Desafío (Modo Pro)
 * **Cambio de forma:** En el código, busca donde dice `WaveShape.Sine` (Onda Senoidal) y cámbialo por `Square` (Cuadrada) o `Sawtooth` (Diente de sierra). ¿A que ahora suena mucho más "robótico" y agresivo?
