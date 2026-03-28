@@ -1,97 +1,96 @@
-# Primeros pasos con @boardname@
+# 🚀 ¡Personaliza tu Gadget! Primeros pasos con Micro:bit 
 
-## Objetivo @showdialog
+## 🌟 El Reto de hoy @unplugged
+¿Acabas de recibir tu Micro:bit? ¡Vamos a darle vida! Hoy aprenderás a programar tu placa para que sea tu **tarjeta de identificación inteligente**, un **comunicador de estados de ánimo** y un **dado electrónico** para tus juegos. 
 
-En esta actividad veremos algunas **funciones básicas** que puede realizar @boardname@.
+---
 
-Aprenderás a utilizar los botones `|A|` y `|B|`, la pantalla LEDs, gestos, enviar el programa al micro:bit...
+### 🎒 Requisitos (Tu Kit de Inventor)
+* **1 Micro:bit** (v1 o v2).
+* **1 Cable USB**.
+* **Un ordenador** con acceso a MakeCode.
 
-![Heart shape in the LEDs](/static/mb/projects/flashing-heart/sim.gif)
+### 🧠 Conceptos Clave
+* **Eventos:** Son los "disparadores". Por ejemplo: *Al presionar un botón* o *Al agitar*. El código solo se ejecuta cuando ese evento ocurre.
+* **Cadenas de texto:** Es como llamamos los programadores a las palabras o frases.
+* **Azar:** Dejar que la Micro:bit elija un número por nosotros, ¡como un dado de verdad!
 
-## Mostrar texto en la pantalla de LEDS
+---
 
-* **Objetivo**: Vamos a convertir a @boardname @ en tu tarjeta de identificación.
+## 1. ¡Identifícate! (Al iniciar) 🪪
+Lo primero es que la placa sepa quién es su dueño. Queremos que, nada más conectarla, salude con tu nombre.
 
-**Instrucciones**: 
-1.Arrastra el bloque ``||basic:mostar cadena:"Hola"||`` (debajo de la **caja de herramientas**) dentro de ``||basic:al iniciar||``.
-2. Reemplaza el texto **``"Hola"``** con tu **nombre**. El texto se desplazará una sola vez.
+1.  Busca el bloque azul `||basic:al iniciar||`.
+2.  Arrastra dentro el bloque `||basic:mostrar cadena "Hola"||`.
+3.  Cambia "Hola" por **TU NOMBRE**. 
 
 ```blocks
-basic.showString("Alberto")
+basic.showString("ALBERTO")
 ```
 
 
-## Botón |A|
+## 2. Botón A: Tu nombre a la orden 🔘
+Ahora haremos que tu nombre no solo salga al principio, sino cada vez que tú quieras.
 
-* **Objetivo**: Vamos a intentar que tu nombre aparezca cuando pulsas el **botón `|A|`**:
-
-**Instrucciones**:
-1. Arrastra el bloque ``||input:al presionar el botón: A||`` y coloca ``||basic:mostrar cadena:("TU_NOMBRE")||`` en su ranura.
-2. Ahora pulsa el botón **`A`** y mira como se desplaza el texto.
+1.  Saca el bloque rosa `||input:al presionar el botón A||`.
+2.  Pon dentro otro `||basic:mostrar cadena||` con tu nombre. 
+3.  **Prueba:** Haz clic en el botón A del simulador. ¡Ahí está!
 
 ```blocks
-input.onButtonPressed(Button.A, () => {
-    basic.showString(«¡Alberto»)
-});
+input.onButtonPressed(Button.A, function () {
+    basic.showString("ALBERTO")
+})
 ```
 
-## Botón |B|
 
-* **Objetivo**: Coloca algunos bloques para mostrar un **``smiley``** (CARA SONRIENTE) cuando se pulse el botón **`B`**. 
+## 3. Botón B: ¿Cómo te sientes hoy? 😊
+Vamos a usar la pantalla de 25 LEDs para mostrar un dibujo (icono).
 
-**Instrucciones**: 
-1. Arrastra el bloque ``||basic:mostrar LEDs||`` dentro de otro bloque ``||input:al presionar el botón: B||`` (Usa el desplegable para encontrar **`B`**).
-2. Dibuja una cara sonriente en la pantalla de 25 (5x5) LEDs.
+1.  Saca el bloque `||input:al presionar el botón A||` y cámbialo a **B** usando la flechita.
+2.  Arrastra dentro el bloque `||basic:mostrar LEDs||`.
+3.  **Dibuja:** Haz clic en los cuadraditos para dibujar una cara sonriente o tu icono favorito.
 
 ```blocks
-input.onButtonPressed(Button.B, () => {
+input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
-    # # . # #
-    . # . # .
-    . . # . .
-    # . . . #
-    . # # # .
-    `)
+        . # . # .
+        . . . . .
+        # . . . #
+        . # # # .
+        . . . . .
+        `)
 })
 ```
 
-## Gestos (agitar)
 
-* **Objetivo**: Ahora, haz que se muestre un **número al azar** al *agitar* 🪇  el @boardname@.
+## 4. ¡Agita para jugar! (El Dado Digital) 🎲
+Tu Micro:bit tiene un sensor de movimiento llamado acelerómetro. Vamos a usarlo para crear un dado del 1 al 6.
 
-**Instrucciones**: 
-1. Coloca los bloques ``||basic:mostrar número|||`` y ``||math:escoger al azar||`` en un bloque ``||input:si agitado||`` para construir un dado.
-2. Agita la tarjeta una vez para que se muestre un número al azar. Repítelo varias veces.
-
-```blocks
-input.onGesture(Gesture.Shake, () => {
-    basic.showNumber(randint(0, 10))
-})
-```
-
-## Programar un dado electrónico
-
-* **Objetivo**: Convierte @boardname@ en un dado típico 🎲 que muestre valores de `1` a `6`.
-
-**Instrucciones**:
-1. En  ``||math:escoger al azar de (1) a (6)||``, ¡no olvides elegir bien los valores mínimo 1 y máximo 6!
+1.  Busca el bloque `||input:si agitado||`.
+2.  Mete dentro un `||basic:mostrar número||`.
+3.  En lugar del "0", ve a **Matemática** y busca `||math:escoger al azar de 0 a 10||`.
+4.  **Ajuste importante:** Cambia los números para que el azar sea de **1 a 6**.
 
 ```blocks
-input.onGesture(Gesture.Shake, () => {
+input.onGesture(Gesture.Shake, function () {
     basic.showNumber(randint(1, 6))
 })
 ```
 
-## Enviar el programa a micro:bit
+---
 
-Ahora vamos a **transferir el programa** a la tarjeta controladora @boardname@:
+## 💾 Cómo pasar tu magia a la placa
+¡Es hora de salir del ordenador!
+1. Conecta tu Micro:bit al USB.
+2. Haz clic en el botón gigante **Descargar**.
+3. Si te sale una ventana, busca la unidad llamada **MICROBIT** y guarda el archivo ahí.
+4. ¡Mira la parte de atrás de tu placa! Una luz amarilla parpadeará mientras se transfiere el código.
 
-1. Conecta la tarjeta al ordenador con un cable USB y haz clic en ``|Descargar|``.2
-2. Guarda el programa en la unidad **@drivename@**. Esto transfiere tu código al @boardname@.
+---
 
+## 🏆 Súper Desafío (Modo Pro)
+¿Crees que puedes combinarlo todo?
+* Intenta que al presionar **A+B** (los dos a la vez) la Micro:bit muestre un icono de un **corazón latiendo**.
+* **Pista:** Necesitarás dos bloques de `||basic:mostrar icono||` seguidos dentro de un evento de botón A+B.
 
-En el @boardname@, pulse el botón **`A`** para desplazar el texto. Pulse el botón **`B`** para mostrar un `smile`. Agita el @boardname@ y mira qué número ha elegido.
-
-## Final
-
-¡Bien hecho! Has completado tu primera actividad. 😛
+---
