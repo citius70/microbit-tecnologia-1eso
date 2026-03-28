@@ -22,8 +22,8 @@
 En lugar de usar melodías grabadas, vamos a fabricar un sonido único que cambie constantemente.
 
 1.  Busca el bloque `||basic:para siempre||`.
-2.  Dentro, pon el bloque de música: `||music:reproducir expresión de sonido||`.
-3.  Haz clic en el bloque de la expresión para abrir el **Editor de Sonidos avanzado**.
+2.  Dentro, pon el bloque de música: `||music: reproduce secuencia () en modo [hasta que termine]||`.
+3.  Haz clic en `|+|` del bloque de la expresión para abrir el **Editor de Sonidos avanzado**.
 
 ---
 
