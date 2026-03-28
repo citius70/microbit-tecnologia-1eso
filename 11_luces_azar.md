@@ -1,8 +1,6 @@
 # 🎆 ¡Espectáculo de Luces y Sonidos Aleatorios!
 
-
-
-### 🌟 El Reto de hoy unplugged
+## 🌟 El Reto de hoy @unplugged
 ¿Te imaginas crear un programa que nunca se repita? Hoy vamos a programar un "generador de caos artístico". Al pulsar un botón, la Micro:bit elegirá cuántas luces encender, en qué posición y qué nota musical tocar. ¡Todo decidido por el azar!
 
 ---
